@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Lobster&family=Noto+Serif+HK:wght@500&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: white;
+}
+
+h2, h3, h4{
+    font-family: 'Noto Serif HK', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: 'DynaPuff', cursive;
+    font-weight: 400;
+}
+
+/*Header area*/
+.pinkline {
+    background-color: #FF8BFE;
+    height: 30px;
+    width: 100%;
+}
+
+.pinkline a {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+/*Intro*/
+
+#intro {
+    text-align: center;
+    text-shadow: 2px 2px 20px #ff6dac;
+}
+
+/*Story*/
+.chapter {
+    margin: 10px;
+    padding: 10px;
+    background-color: #6cdaff;
+}
+
+.chapter h2, h3 {
+    padding: 5px 0px;
+}
+
+/* Call to action and button design*/
+#calltoaction {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.button {
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    height: 100px;
+    width: 200px;
+    background-color: #7950A6;
+    border: 3px solid #6cdaff;
+    border-radius: 50%;
+    color: #fff56d;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px; 
+}
+
+.button:hover {
+    background-color: #ff6dac;
+}
+
+/*Footer*/
+/*
+footer {
+    background-color: #FF8BFE;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}

@@ -14,30 +14,32 @@
 <body>
     <!--Header-->
     <header>
-        <h1>Pete's Party</h1>
+        <a href="index.html"><i class="fa-solid fa-house-chimney"></i></a>
+        <img src="/assets/images/wepik-photo-mode-2022731-143745.png" alt="">
     </header>
-    <div id="story">
+    <div class="chapter">
         <h2>
-            Chapter One
+            Challenge: Pick the lock!
         </h2>
             <p>
             Pete: "My gosh, so many people at the bus-stop. 
             <br>
             Wish I'd repair my car, but have to pay the bills first! 
             <br>
-            What on earth do I do now?"
+            Hmmm...there's a bike with some sort of combination lock...let's give it a try!
         </p>
     </div>
-    <div class="choices">
-        <button data-type="addition" class="btn btn--big btn--green">
-            <i class="fas fa-plus"></i>
-        </button>
-        <button data-type="subtract" class="btn btn--big btn--blue">
-            <i class="fas fa-minus"></i>
-        </button>
-        <button data-type="multiply" class="btn btn--big btn--orange">
-            <i class="fas fa-times"></i>
-        </button>
+    <div class="challenge">
+        <div class="question-area">
+            <span id="operand1">0</span>
+            <span id="operand2">0</span>
+            <span id="operand3">0</span>
+            <span id="operand3">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter Answer:</p>
+            <input id="answer-box" type="number">
+        </div>
+        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
     </div>
     
     <div>
