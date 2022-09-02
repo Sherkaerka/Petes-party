@@ -1,37 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer()
-            }
-        });
-    }
-
-
-});
-
-funtion checkAnswer() {
-
-    let userAnswer1 = parseInt(document.getElementById("answer-box1").value);
-    let userAnswer2 = parseInt(document.getElementById("answer-box2").value);
-    let userAnswer3 = parseInt(document.getElementById("answer-box3").value);
-    let isCorrect = userAnswer1 === 6, userAnswer2 === 1, userAnswer3 === 0;
-
-    if (isCorrect) {
-        alert("Oh you little thief, this might not end well!")
-        incrementTime();
-    } else {
-        alert("Aarrrrrghh...time fllies and I'm just guessing here!")
-        incrementTime();
-    }
-
-
-}
-
 /**
- * Score gauge
+ * Lock pick
  */
 
-function incrementTime()
+let submit = document.getElementById("submit");
+
+submit.addEventListener("click", checkAnswer);
+
+
+function checkAnswer() {
+
+    let firstDigit = document.getElementById("num1").value;
+    let trueFirst = 6;
+    let result = firstDigit == trueFirst;
+
+    if (result) {
+        alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
+    } else {
+        alert("I'm just guessing here and wasting my time! Think...think...");
+    }
+
+}
