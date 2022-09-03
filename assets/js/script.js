@@ -21,6 +21,7 @@ function checkAnswer() {
         alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
     } else {
         alert("I'm just guessing here and wasting my time! Think...think...");
+        incrementTime();
     }
 
 }
@@ -29,24 +30,33 @@ function checkAnswer() {
  * Time Left Gauge
  */
 
- google.charts.load('current', {'packages':['gauge']});
- google.charts.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
 
- function drawChart() {
+      function drawChart() {
 
-   var data = google.visualization.arrayToDataTable([
-     ['Label', 'Value'],
-     ['Time Left', 40],
-   ]);
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Time Left', actualTime],
+        ]);
 
-   var options = {
-     width: 400, height: 120,
-     redFrom: 90, redTo: 100,
-     yellowFrom:75, yellowTo: 90,
-     minorTicks: 5
-   };
+        var options = {
+          width: 400, height: 120,
+          redFrom: 9, redTo: 10,
+          yellowFrom:7, yellowTo: 9,
+          minorTicks: 5, max:10
+        };
 
-   var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
 
-   chart.draw(data, options);
-   }
+        chart.draw(data, options);
+        }
+
+        /**
+         * Add XX to the gauge everytime a try on a challenge has been made, no matter 
+         * wether it is right or wrong
+         */
+        let actualTime = 0;
+
+        
+        
