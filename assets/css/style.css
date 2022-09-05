@@ -97,6 +97,9 @@ footer {
 
 /*The Game*/
 
-input {
+#num1, #num2, #num3 {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
     border: 3px solid #7950A6;
 }

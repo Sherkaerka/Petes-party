@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
     <!-- Stylesheet and fonts-->
     
     <link rel="stylesheet" href="assets/css/style.css">
@@ -32,27 +33,25 @@
     
     <!--Challenge section-->
     <div class="challenge">
-        <form id="the-lock">
-            <label for="num1"></label>
-            <input type="number" name="num1" id="num1" max="9" min="0">
-            <label for="num2"></label>
-            <input type="number" name="num2" id="num2" max="9" min="0">
-            <label for="num3"></label>
-            <input type="number" name="num3" id="num3" max="9" min="0">
+        <div id="the-lock">
+            <span id="num1"></span>
+            <span id="num2"></span>
+            <span id="num3"></span>
             <button id="submit">Try code</button>
-        </form>
+        </div>
     </div>
     
     <!--Score feedback-->
     <div>
         <h3>Time to Party Gauge</h3>
+        <p>Time spent <span id="time">0</span></p>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
        <div id="chart_div" style="width: 400px; height: 120px;"></div>
     </div>
     
     <!-- Footer with social link -->
     <footer>
-        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter-square"></i></a>
+       
     </footer>
 
     <!-- font awedome kit-->

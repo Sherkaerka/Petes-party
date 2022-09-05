@@ -1,11 +1,10 @@
 /**
  * Lock pick
  */
-
+document.addEventListener("DOMContentLoaded", function() {
 let submit = document.getElementById("submit");
 
 submit.addEventListener("click", checkAnswer);
-
 
 function checkAnswer() {
 
@@ -25,11 +24,11 @@ function checkAnswer() {
     }
 
 }
-
+});
 /**
  * Time Left Gauge
  */
-
+  
       google.charts.load('current', {'packages':['gauge']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -37,7 +36,7 @@ function checkAnswer() {
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['Time Left', actualTime],
+          ['Time Left', actualTime]
         ]);
 
         var options = {
@@ -56,7 +55,13 @@ function checkAnswer() {
          * Add XX to the gauge everytime a try on a challenge has been made, no matter 
          * wether it is right or wrong
          */
-        let actualTime = 0;
+         function incrementTime() {
 
+          let oldTime = parseInt(document.getElementById("time").innerText);
+          document.getElementById("time").innerText = ++oldTime;
+      
+      }
         
-        
+      function nextGame() {
+        location.href = "http://www.aftonbladet.se";
+      }
