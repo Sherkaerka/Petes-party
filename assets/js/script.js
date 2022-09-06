@@ -95,13 +95,68 @@ function chapterTwo() {
         let cashierGuess = document.getElementById("sum1").value;
         let trueCashier = 70;
 
-        let resultTwo = cashierGuess === trueCashier;
+        let resultTwo = cashierGuess == trueCashier;
 
         if (resultTwo) {
-            alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
+            alert("You're a math genius! Now let's go give that girl her birthday flowers!");
+            incrementTime();
+            chapterThree();
         } else {
-            alert("I'm just guessing here and wasting my time! Think...think...");
+            alert("Not again, why didn't I pay attention on math class?");
             incrementTime();
         }
+    }
+}
+
+/**
+ * Adds Chapter 3 including final challenge
+ */
+function chapterThree() {
+    document.getElementById("chapter-three").innerHTML += "<h2>Chapter 3: The long arm of the law!</h2>";
+
+    
+    /**
+     * Dice game
+     */
+    
+    let peteDice = document.createElement("span");
+    peteDice.setAttribute("id", "dice1");
+    document.getElementById("the-law").appendChild(peteDice);
+
+    let policeDice = document.createElement("span");
+    policeDice.setAttribute("id", "dice2");
+    document.getElementById("the-law").appendChild(policeDice);
+
+
+    /**Roll-the-dice button */
+    let rollButton = document.createElement("input");
+    rollButton.setAttribute("id","roll");
+    rollButton.setAttribute("type", "button");
+    rollButton.value ="Roll the dice";
+    rollButton.addEventListener("click", rollTheDice);
+    document.getElementById("the-law").appendChild(rollButton);
+
+
+
+    function rollTheDice() {
+        
+            var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+            var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+            document.getElementById("dice1").textContent = randomNumber1;
+            document.getElementById("dice2").textContent = randomNumber2;
+
+  
+            if (randomNumber1 === randomNumber2) {
+                incrementTime();
+            }
+  
+            else if (randomNumber1 < randomNumber2) {
+                incrementTime();
+            }
+  
+            else {
+                incrementTime();
+            };
     }
 }

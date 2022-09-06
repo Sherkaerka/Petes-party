@@ -97,7 +97,7 @@ footer {
 
 /*Pick the lock game*/
 
-#num1, #num2, #num3, #sum1 {
+#num1, #num2, #num3, #sum1, #dice1, #dice2 {
     display: inline-flex;
     width: 50px;
     height: 50px;
