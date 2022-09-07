@@ -5,12 +5,13 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-color: white;
+    background-color: #ff6dac;
 }
 
 h2, h3, h4{
@@ -21,42 +22,30 @@ h2, h3, h4{
 h1 {
     font-family: 'DynaPuff', cursive;
     font-weight: 400;
+    filter: drop-shadow(8px 8px 4px #fff56d);
 }
 
 /*Header area*/
-.pinkline {
-    background-color: #FF8BFE;
-    height: 30px;
-    width: 100%;
-}
-
-.pinkline a {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-header img {
-    width: 100%;
-    height: auto;
-}
-
-/*Intro*/
-
-#intro {
-    text-align: center;
-    text-shadow: 2px 2px 20px #ff6dac;
+header {
+    margin: 10px;
 }
 
 /*Story*/
 .chapter {
     margin: 10px;
     padding: 10px;
-    background-color: #6cdaff;
+    background-color: #fefff1;
+    box-shadow: 8px 8px 8px grey;
 }
 
 .chapter h2, h3 {
     padding: 5px 0px;
+}
+
+/*Challenge section*/
+.challenge {
+    margin: 10px;
+    padding: 10px;
 }
 
 /* Call to action and button design*/
@@ -66,21 +55,15 @@ header img {
 }
 
 .button {
-    font-family: 'Lobster', cursive;
-    font-weight: 400;
-    height: 100px;
-    width: 200px;
-    background-color: #7950A6;
-    border: 3px solid #6cdaff;
-    border-radius: 50%;
-    color: #fff56d;
-    text-align: center;
+    display: inline-block;
+    color: #fefff1;
     text-decoration: none;
-    padding: 10px; 
-}
+    padding: 20px 50px;
+    border: 3px solid #3c67e3;
+    border-radius: 10px;
 
 .button:hover {
-    background-color: #ff6dac;
+
 }
 
 
