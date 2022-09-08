@@ -160,3 +160,14 @@ function chapterThree() {
             };
     }
 }
+
+/**
+ * Question mark tip buttons
+ */
+
+let tip1 = document.getElementById("tip1");
+tip1.addEventListener("click", tipOne);
+
+function tipOne() {
+    alert("test");
+}
