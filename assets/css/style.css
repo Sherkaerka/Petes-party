@@ -11,7 +11,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-color: #ff6dac;
 }
 
 h2, h3, h4{
@@ -27,7 +26,14 @@ h1 {
 
 /*Header area*/
 header {
-    margin: 10px;
+    border-bottom: 20px solid #FF31AC;
+}
+
+img {
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Story*/
@@ -48,6 +54,13 @@ header {
     padding: 10px;
 }
 
+.challenge > i {
+    color: #1D12FC
+}
+.challenge > i:hover {
+    color: #FF31AC;   
+}
+
 /* Call to action and button design*/
 #calltoaction {
     text-align: center;
@@ -58,12 +71,14 @@ header {
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
-    padding: 20px 50px;
-    border: 3px solid #3c67e3;
-    border-radius: 10px;
+    padding: 15px 40px;
+    background-color: #1D12FC;
+    box-shadow: 5px 5px #FFE843;
+    transform: skewX(-15deg);
+}
 
 .button:hover {
-
+    background-color: #FF31AC;
 }
 
 
