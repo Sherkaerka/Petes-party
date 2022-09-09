@@ -23,7 +23,6 @@ function checkAnswer() {
     } else {
         alert("I'm just guessing here and wasting my time! Think...think...");
         incrementTime();
-        chapterTwo();
     }
 
 }
