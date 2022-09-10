@@ -30,28 +30,6 @@ function checkAnswer() {
 /**
  * Time Left Gauge
  */
-  
-google.charts.load('current', {'packages':['gauge']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['Label', 'Value'],
-        ['Time Left', actualTime]
-    ]);
-
-     var options = {
-        width: 400, height: 120,
-        redFrom: 9, redTo: 10,
-        yellowFrom:7, yellowTo: 9,
-        minorTicks: 5, max:10
-    };
-
-    var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
-
-    chart.draw(data, options);
-    }
 
 /**
 * Add XX to the gauge everytime a try on a challenge has been made, no matter 
@@ -70,8 +48,8 @@ let actualTime = 0;
  * Add chapter 2 and challenge
  */
 function chapterTwo() {
-    document.getElementById("chapter-two").innerHTML += "<h2>Chapter 2: Get the flowers!</h2>";
-    
+    document.getElementById("chapter-two").setAttribute("class", "chapter");
+    document.getElementById("chapter-two").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong>6.25</strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
 
     /**Input field */
     let guessSum = document.createElement("input");
@@ -83,7 +61,7 @@ function chapterTwo() {
     let sumButton = document.createElement("input");
     sumButton.setAttribute("id","sum2");
     sumButton.setAttribute("type", "button");
-    sumButton.value ="Try me";
+    sumButton.value ="Hmmm...";
     sumButton.addEventListener("click", checkSecondAnswer);
     document.getElementById("the-cashier").appendChild(sumButton);
     
@@ -92,7 +70,7 @@ function chapterTwo() {
 
     function checkSecondAnswer() {
         let cashierGuess = document.getElementById("sum1").value;
-        let trueCashier = 70;
+        let trueCashier = 8.20;
 
         let resultTwo = cashierGuess == trueCashier;
 

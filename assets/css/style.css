@@ -65,13 +65,13 @@ img {
 }
 
 
-/* Call to action and button design*/
+/* Button design*/
 #calltoaction {
     text-align: center;
     margin: 50px 0px;
 }
 
-.button, button {
+.button, button, #sum2 {
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -81,8 +81,13 @@ img {
     transform: skewX(-15deg);
 }
 
-.button:hover, button:hover {
+.button:hover, button:hover, #sum2:hover {
     background-color: #FF31AC;
+}
+
+#submit, #sum2 {
+    display: block;
+    margin: 20px auto;
 }
 
 /*Pick The Lock*/
@@ -107,32 +112,11 @@ img {
     border: 3px solid black;
     background-color: linear-gradient(0deg, blue, green 40%, red);
     font-size: 40px;
-    
 }
 
-
-/*Game buttons*/
-#submit {
-    display: block;
-    margin: 20px auto;
-}
-
-#sum2, #roll {
-    font-family: 'Lobster', cursive;
-    font-weight: 400;
-    height: 50px;
+#sum1 {
+    margin-top: 20px;
     width: 100px;
-    background-color: #7950A6;
-    border: 3px solid #6cdaff;
-    border-radius: 50%;
-    color: #fff56d;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px; 
-}
-
-button:hover {
-    background-color: #ff6dac;
 }
 
 
