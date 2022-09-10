@@ -76,7 +76,6 @@ function chapterTwo() {
 
         if (resultTwo) {
             alert("You're a math genius! Now let's go give that girl her birthday flowers!");
-            incrementTime();
             chapterThree();
         } else {
             alert("Not again, why didn't I pay attention on math class?");
@@ -89,7 +88,8 @@ function chapterTwo() {
  * Adds Chapter 3 including final challenge
  */
 function chapterThree() {
-    document.getElementById("chapter-three").innerHTML += "<h2>Chapter 3: The long arm of the law!</h2>";
+    document.getElementById("chapter-three").setAttribute("class", "chapter");
+    document.getElementById("chapter-three").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p>";
 
     
     /**

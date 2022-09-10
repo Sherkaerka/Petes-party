@@ -71,7 +71,7 @@ img {
     margin: 50px 0px;
 }
 
-.button, button, #sum2 {
+.button, button, #sum2, #roll {
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -81,11 +81,11 @@ img {
     transform: skewX(-15deg);
 }
 
-.button:hover, button:hover, #sum2:hover {
+.button:hover, button:hover, #sum2:hover, #roll:hover {
     background-color: #FF31AC;
 }
 
-#submit, #sum2 {
+#submit, #sum2, #roll {
     display: block;
     margin: 20px auto;
 }
@@ -117,6 +117,11 @@ img {
 #sum1 {
     margin-top: 20px;
     width: 100px;
+}
+
+/*Score feedback*/
+#score {
+    text-align: center;
 }
 
 
