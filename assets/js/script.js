@@ -28,13 +28,9 @@ function checkAnswer() {
 }
 });
 /**
- * Time Left Gauge
+ * Mistake counter 
  */
 
-/**
-* Add XX to the gauge everytime a try on a challenge has been made, no matter 
-* wether it is right or wrong
-*/
 function incrementTime() {
 
     let oldTime = parseInt(document.getElementById("time").innerText);
