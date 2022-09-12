@@ -129,7 +129,7 @@ function chapterThree() {
             }
   
             else {
-                incrementTime();
+                location.href = 'victory.html';
             };
     }
 }

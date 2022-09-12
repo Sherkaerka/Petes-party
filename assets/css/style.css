@@ -123,6 +123,24 @@ img {
 /*Score feedback*/
 #score {
     text-align: center;
+    border-top: 2px solid #FF31AC;
+}
+
+#time {
+    font-size: xx-large;
+}
+
+/*Victory page*/
+
+#congrats {
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#again-button {
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 
