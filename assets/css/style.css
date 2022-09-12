@@ -132,8 +132,12 @@ img {
 
 /*Victory page*/
 
+#victory {
+    text-align: center;
+}
+
 #congrats {
-    width: 70%;
+    width: 50%;
     height: auto;
     margin-top: 20px;
 }

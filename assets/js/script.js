@@ -18,7 +18,6 @@ function checkAnswer() {
 
     if (result) {
         alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
-        incrementTime();
         chapterTwo();
     } else {
         alert("I'm just guessing here and wasting my time! Think...think...");
@@ -36,6 +35,12 @@ function incrementTime() {
     let oldTime = parseInt(document.getElementById("time").innerText);
     document.getElementById("time").innerText = ++oldTime;
       
+    if (document.getElementById("time").innerText < 3) {
+        console.log("continue")
+    } else {
+        alert("Party over! You've made too many mistakes and have to start over...");
+        location.href = 'index.html';
+    }
 }
 
 let actualTime = 0;
@@ -118,7 +123,6 @@ function chapterThree() {
 
             document.getElementById("dice1").textContent = randomNumber1;
             document.getElementById("dice2").textContent = randomNumber2;
-
   
             if (randomNumber1 === randomNumber2) {
                 incrementTime();
