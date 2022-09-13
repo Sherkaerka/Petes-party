@@ -97,15 +97,15 @@ function chapterThree() {
     /**
      * Dice game
      */
-    let name1 = document.createElement("div");
-    name1.setAttribute("id", "namesDice");
-    document.getElementById("the-law").appendChild(name1);
-    document.getElementById("namesDice").innerHTML += "<h3>Pete</h3><span><h3>Bob</h3>";
-
     let diceImage = document.createElement("img");
     diceImage.setAttribute("id", "dice-pic");
     document.getElementById("the-law").appendChild(diceImage);
-    diceImage.src = "assets/images/dice2.png";
+    diceImage.src = "assets/images/die.png";
+    
+    let name1 = document.createElement("div");
+    name1.setAttribute("id", "namesDice");
+    document.getElementById("the-law").appendChild(name1);
+    document.getElementById("namesDice").innerHTML += "<h3>Pete vs. Bob</h3>";
 
     let peteDice = document.createElement("span");
     peteDice.setAttribute("id", "dice1");
