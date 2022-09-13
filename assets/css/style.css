@@ -120,6 +120,13 @@ img {
     width: 100px;
 }
 
+/*Dice game*/
+
+#namesDice {
+    display: flex;
+    justify-content: center;
+}
+
 /*Score feedback*/
 #score {
     text-align: center;
