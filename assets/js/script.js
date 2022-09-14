@@ -17,6 +17,7 @@ function checkAnswer() {
     let trueThird = 0;
     let result = firstDigit == trueFirst && secondDigit == trueSecond && thirdDigit == trueThird;
 
+
     if (result) {
         alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
         chapterTwo();
@@ -27,6 +28,7 @@ function checkAnswer() {
 
 }
 });
+
 /**
  * Mistake counter 
  */
@@ -72,7 +74,7 @@ function chapterTwo() {
 
     function checkSecondAnswer() {
         let cashierGuess = document.getElementById("sum1").value;
-        let trueCashier = 8.20;
+        let trueCashier = 1.8;
 
         let resultTwo = cashierGuess == trueCashier;
 

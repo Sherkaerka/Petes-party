@@ -166,6 +166,7 @@ img {
 
 footer {
     border-top: 2px solid #FF31AC;
+    height: 30px;
 }
 
 /*Add media queries for larger devices*/
