@@ -2,54 +2,48 @@
  * Lock pick
  */
 document.addEventListener("DOMContentLoaded", function() {
-let submit = document.getElementById("submit");
 
-submit.addEventListener("click", checkAnswer);
-
-
-function checkAnswer() {
-
-    let firstDigit = document.getElementById("num1").value;
-    let trueFirst = 6;
-    let secondDigit = document.getElementById("num2").value;
-    let trueSecond = 1;
-    let thirdDigit = document.getElementById("num3").value;
-    let trueThird = 0;
-    let result = firstDigit == trueFirst && secondDigit == trueSecond && thirdDigit == trueThird;
-
-
-    if (result) {
-        alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
-        chapterTwo();
-    } else {
-        alert("I'm just guessing here and wasting my time! Think...think...");
-        incrementTime();
-    }
-
-}
+    let fullGame = document.getElementById("full-game");
+    fullGame.addEventListener("click", chapterOne);
 });
 
-/**
- * Mistake counter 
+/** 
+ * Add chapter 1 and challenge -Pick the lock
  */
 
-function incrementTime() {
+function chapterOne(){
 
-    let oldTime = parseInt(document.getElementById("time").innerText);
-    document.getElementById("time").innerText = ++oldTime;
-      
-    if (document.getElementById("time").innerText < 3) {
-        console.log("continue")
-    } else {
-        alert("Party over! You've made too many mistakes and have to start over...");
-        location.href = 'index.html';
-    }
+    document.getElementById("game-area").innerHTML = "";
+   /** 
+    let submit = document.getElementById("submit");
+        submit.addEventListener("click", checkAnswer);
+
+function checkAnswer() {
+        
+        let firstDigit = document.getElementById("num1").value;
+        let trueFirst = 6;
+        let secondDigit = document.getElementById("num2").value;
+        let trueSecond = 1;
+        let thirdDigit = document.getElementById("num3").value;
+        let trueThird = 0;
+        let result = firstDigit == trueFirst && secondDigit == trueSecond && thirdDigit == trueThird;
+
+
+        if (result) {
+            alert("Oh wow, we got ourselves a little thief! Good job, lets go...");
+            chapterTwo();
+        } else {
+            alert("I'm just guessing here and wasting my time! Think...think...");
+            incrementTime();
+        }
+
+    } 
+    */
 }
 
-let actualTime = 0;
 
 /**
- * Add chapter 2 and challenge
+ * Add chapter 2 and challenge -Get the flowers
  */
 function chapterTwo() {
     document.getElementById("chapter-two").setAttribute("class", "chapter");
@@ -89,7 +83,7 @@ function chapterTwo() {
 }
 
 /**
- * Adds Chapter 3 including final challenge
+ * Adds Chapter 3 including final challenge -Roll the dice
  */
 function chapterThree() {
     document.getElementById("chapter-three").setAttribute("class", "chapter");
@@ -147,5 +141,22 @@ function chapterThree() {
             else {
                 location.href = 'victory.html';
             };
+    }
+}
+
+/**
+ * Score counter 
+ */
+
+ function incrementTime() {
+
+    let oldTime = parseInt(document.getElementById("time").innerText);
+    document.getElementById("time").innerText = ++oldTime;
+      
+    if (document.getElementById("time").innerText < 3) {
+        console.log("continue")
+    } else {
+        alert("Party over! You've made too many mistakes and have to start over...");
+        location.href = 'index.html';
     }
 }
