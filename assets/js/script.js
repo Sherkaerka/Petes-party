@@ -1,6 +1,3 @@
-/**
- * Lock pick
- */
 document.addEventListener("DOMContentLoaded", function() {
 
     let fullGame = document.getElementById("full-game");
@@ -8,13 +5,66 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /** 
- * Add chapter 1 and challenge -Pick the lock
+ * Add chapter 1 and challenge -Getting out of school
  */
 
 function chapterOne(){
 
-    document.getElementById("game-area").innerHTML = "";
-   /** 
+    document.getElementById("story-area").innerHTML = "";
+    document.getElementById("story-area").setAttribute("class", "chapter");
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 1: Getting out of school!</h2><p>As he steps out of the school building, he can see that place isn’t empty as he expected. Instead, the bus-stop is so overcrowded that the last bit of hope to make it to the party leaves him.<br>Pete sits down on the staircase, sobbing and feeling sorry for himself: “Look at this mess, why do this have to be the story of my life!?”<br>Then he sees it, one lonely bike just standing there. It’s not his bike, of course, but maybe if he were just to have a look…<br>It’s locked…combination lock…one could give it a try since everyone else is focusing on trying to climb the first bus approaching the stop.<br>Or I could start walking, what do you think?";
+
+    document.getElementById("game-area").innerHTML += "<h2>What do you wanna do?</h2>";
+
+    let legalChoice = document.createElement("input");
+    legalChoice.setAttribute("id","legal");
+    legalChoice.setAttribute("type", "button");
+    legalChoice.value ="Start walking";
+    legalChoice.addEventListener("click", startWalking);
+    document.getElementById("game-area").appendChild(legalChoice);
+    
+    let illegalChoice = document.createElement("input");
+    illegalChoice.setAttribute("id","illegal");
+    illegalChoice.setAttribute("type", "button");
+    illegalChoice.value ="Try to pick the lock";
+    illegalChoice.addEventListener("click", lockPick);
+    document.getElementById("game-area").appendChild(illegalChoice);  
+   
+    /** Walking subchapter 1.1 */
+    function startWalking(){
+        document.getElementById("story-area").innerHTML = "";
+        document.getElementById("game-area").innerHTML = "";
+
+        document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Remenber the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>"
+        
+        
+        let revealTurns = document.createElement("input");
+        revealTurns.setAttribute("id","illegal");
+        revealTurns.setAttribute("type", "button");
+        revealTurns.value ="Show the turns";
+        revealTurns.addEventListener("click", showTurns);
+        document.getElementById("game-area").appendChild(revealTurns); 
+
+        function showTurns(){
+            document.getElementById("game-area").innerHTML="left left right left right right";
+            setTimeout(function(){
+            document.getElementById("game-area").innerHTML = "How was it?";
+            /**Input field */
+            let firstTurn = document.createElement("input");
+            firstTurn.setAttribute("id","turn1");
+            firstTurn.setAttribute("type", "text");
+            firstTurn.getElementById("game-area").appendChild(firstTurn);        
+            },3000);   
+        }
+    }
+
+    
+
+    /** Pick the lock subchapter 1.2 */
+    function lockPick(){
+
+    }
+    /** 
     let submit = document.getElementById("submit");
         submit.addEventListener("click", checkAnswer);
 
