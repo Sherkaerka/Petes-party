@@ -17,8 +17,16 @@
         <img src="assets/images/wepik-drawn-gaming-logo-202288-64859.png" alt="Picture of a retro joystick">
     </header>
     
-    <!--Introduction and preface-->
-        <div class="chapter">
+    <!--Score feedback-->
+    <div id="score">
+        <h3>Number of blunders: <span id="time">0</span></h3>
+        <p>Remember: 3 mistakes and you're out</p>
+    </div>
+
+    
+    
+    <!--Story Area-->
+        <div id="story-area" class="chapter">
             <h3>
                 The Game:
             </h3>
@@ -32,18 +40,16 @@
             <br>
             <h4>Tips along the way...</h4>
             <br>
-            <i class="fa-solid fa-question" onclick="alert('Yeah, great that you tried, now lets go!')"></i> The questionmark will help you from time to time!
-            <br>
-            <br>
             <p>3 mistakes = Game Over
             </p>
         </div>
         
-    <!--Call to action button to start game-->
-        <div id="calltoaction">
-            <a href="game.html" class="button">Start the Game!>>></a>
+    <!--Game Area-->
+        <div id="game-area">
+            <input id="start" type="button" value="Start Full Game!>>>">
+            <button id="try-random">Try random chapter</button>
         </div>
-
+    
         
     
     <!-- Footer with social link -->
@@ -51,5 +57,9 @@
     
     <!-- font awedome kit-->
     <script src="https://kit.fontawesome.com/8d9450d66f.js" crossorigin="anonymous"></script>
+
+    <!-- Javascript-->
+    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
