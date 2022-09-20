@@ -90,27 +90,8 @@ function chapterOne(){
         }
  
         //Driver Code
-        var b = ["left"];
-        console.log(isEqual(turns, b));
-/**
-        function isEqual(){
-            let trueTurns = [];
-    
-            // If length is not equal
-            if(trueTurns.length!=turns.length)
-            return "False";
-            else{
-     
-            // Comparing each element of array
-            for(var i=0;i<trueTurns.length;i++)
-            if(trueTurns[i]!=turns[i])
-            return "False";
-            return "True";
-            }
-         }
-         let v = isEqual();
-         console.log(v);
-   */      
+        var b = ["left", "left", "right", "left", "right", "right"];
+        console.log(isEqual(turns, b));    
 
         let checkTurn = document.createElement("input");
         checkTurn.setAttribute("id","checkTurns");
@@ -122,18 +103,50 @@ function chapterOne(){
         function checkTurns(){
             isEqual
             console.log(isEqual(turns, b));
+
+            if (isEqual(turns, b)) {
+                alert("yes");
+                chapterTwo();
+            } else {
+                alert("no");
+                chapterTwo();
+            }
         }
     }
 
     /** Pick the lock subchapter 1.2 */
     function lockPick(){
+        document.getElementById("story-area").innerHTML = "";
+        document.getElementById("game-area").innerHTML = "";
 
+        document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p>"
+    
+        /** Combination lock */
+        let firstDigit = document.createElement("input");
+        firstDigit.setAttribute("id","num1");
+        firstDigit.setAttribute("type", "number");
+        document.getElementById("game-area").appendChild(firstDigit);
+        
+        let secondDigit = document.createElement("input");
+        secondDigit.setAttribute("id","num2");
+        secondDigit.setAttribute("type", "number");
+        document.getElementById("game-area").appendChild(secondDigit);
+        
+        let thirdDigit = document.createElement("input");
+        thirdDigit.setAttribute("id","num3");
+        thirdDigit.setAttribute("type", "number");
+        document.getElementById("game-area").appendChild(thirdDigit);
+
+        /** Try code button */
+        let submitButton = document.createElement("input");
+        submitButton.setAttribute("id","submit");
+        submitButton.setAttribute("type", "button");
+        submitButton.value ="Try combination";
+        submitButton.addEventListener("click", checkAnswer);
+        document.getElementById("game-area").appendChild(submitButton);
     }
-    /** 
-    let submit = document.getElementById("submit");
-        submit.addEventListener("click", checkAnswer);
 
-function checkAnswer() {
+    function checkAnswer() {
         
         let firstDigit = document.getElementById("num1").value;
         let trueFirst = 6;
@@ -153,7 +166,7 @@ function checkAnswer() {
         }
 
     } 
-    */
+    
 }
 
 
@@ -161,14 +174,17 @@ function checkAnswer() {
  * Add chapter 2 and challenge -Get the flowers
  */
 function chapterTwo() {
-    document.getElementById("chapter-two").setAttribute("class", "chapter");
-    document.getElementById("chapter-two").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong>6.25</strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").setAttribute("class", "chapter");
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong>6.25</strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
 
     /**Input field */
     let guessSum = document.createElement("input");
     guessSum.setAttribute("id","sum1");
     guessSum.setAttribute("type", "number");
-    document.getElementById("the-cashier").appendChild(guessSum);
+    document.getElementById("game-area").appendChild(guessSum);
     
     /**Submit answer button */
     let sumButton = document.createElement("input");
@@ -176,7 +192,7 @@ function chapterTwo() {
     sumButton.setAttribute("type", "button");
     sumButton.value ="Hmmm...";
     sumButton.addEventListener("click", checkSecondAnswer);
-    document.getElementById("the-cashier").appendChild(sumButton);
+    document.getElementById("game-area").appendChild(sumButton);
     
 
     

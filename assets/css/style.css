@@ -73,7 +73,7 @@ img {
     margin: 50px 0px;
 }
 
-.button, button, #sum2, #roll {
+.button, button, #sum2, #roll, #illegal, #legal {
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -83,7 +83,7 @@ img {
     transform: skewX(-15deg);
 }
 
-.button:hover, button:hover, #sum2:hover, #roll:hover {
+.button:hover, button:hover, #sum2:hover, #roll:hover #legal:hover, #illegal:hover {
     background-color: #FF31AC;
 }
 
@@ -107,7 +107,7 @@ img {
 
 /*Input fields*/
 
-#num1, #num2, #num3, #sum1, #dice1, #dice2, #turn1{
+#num1, #num2, #num3, #sum1, #dice1, #dice2{
     display: inline-flex;
     width: 50px;
     height: 50px;
