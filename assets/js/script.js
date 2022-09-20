@@ -48,17 +48,82 @@ function chapterOne(){
         function showTurns(){
             document.getElementById("game-area").innerHTML="left left right left right right";
             setTimeout(function(){
-            document.getElementById("game-area").innerHTML = "How was it?";
-            /**Input field */
-            let firstTurn = document.createElement("input");
-            firstTurn.setAttribute("id","turn1");
-            firstTurn.setAttribute("type", "text");
-            firstTurn.getElementById("game-area").appendChild(firstTurn);        
+            document.getElementById("game-area").innerHTML = "";
+            chooseTurns();        
             },3000);   
         }
     }
-
     
+    function chooseTurns(){
+        document.getElementById("game-area").innerHTML +="<h3>Now click the buttons in the right order</h3>";
+
+        let turns = [];
+        console.log(turns);
+
+        /**Turn answer buttons */
+        let leftTurn = document.createElement("input");
+        leftTurn.setAttribute("id","turnLeft");
+        leftTurn.setAttribute("type", "button");
+        leftTurn.addEventListener("click", pushLeft);
+        leftTurn.value ="Left";
+        document.getElementById("game-area").appendChild(leftTurn);
+
+        let rightTurn = document.createElement("input");
+        rightTurn.setAttribute("id","turnRight");
+        rightTurn.setAttribute("type", "button");
+        rightTurn.addEventListener("click", pushRight);
+        rightTurn.value ="Right";
+        document.getElementById("game-area").appendChild(rightTurn);
+        
+        function pushLeft(){
+            turns.push("left");
+            console.log(turns);
+        }
+
+        function pushRight(){
+            turns.push("right");
+            console.log(turns);
+        }
+
+        function isEqual(turns, b){
+            return turns.join() == b.join();
+        }
+ 
+        //Driver Code
+        var b = ["left"];
+        console.log(isEqual(turns, b));
+/**
+        function isEqual(){
+            let trueTurns = [];
+    
+            // If length is not equal
+            if(trueTurns.length!=turns.length)
+            return "False";
+            else{
+     
+            // Comparing each element of array
+            for(var i=0;i<trueTurns.length;i++)
+            if(trueTurns[i]!=turns[i])
+            return "False";
+            return "True";
+            }
+         }
+         let v = isEqual();
+         console.log(v);
+   */      
+
+        let checkTurn = document.createElement("input");
+        checkTurn.setAttribute("id","checkTurns");
+        checkTurn.setAttribute("type", "button");
+        checkTurn.addEventListener("click", checkTurns);
+        checkTurn.value ="Check answer";
+        document.getElementById("game-area").appendChild(checkTurn);
+
+        function checkTurns(){
+            isEqual
+            console.log(isEqual(turns, b));
+        }
+    }
 
     /** Pick the lock subchapter 1.2 */
     function lockPick(){
