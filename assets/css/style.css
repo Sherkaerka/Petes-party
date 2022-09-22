@@ -41,7 +41,7 @@ img {
     margin-right: auto;
 }
 
-/*Story*/
+/*Story Area*/
 .chapter {
     margin: 10px;
     padding: 10px;
@@ -54,26 +54,14 @@ img {
     padding: 5px 0px;
 }
 
-.chapter > i {
-    color: #1D12FC
-}
-.chapter > i:hover {
-    color: #FF31AC;   
-}
-
-/*Challenge section*/
-.challenge {
+/*Game Area*/
+#game-area {
     text-align: center;
 }
 
 
 /* Button design*/
-#calltoaction {
-    text-align: center;
-    margin: 50px 0px;
-}
-
-.button, button, #sum2, #roll, #illegal, #legal {
+#start, #sum2, #roll, #illegal, #legal {
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -83,7 +71,7 @@ img {
     transform: skewX(-15deg);
 }
 
-.button:hover, button:hover, #sum2:hover, #roll:hover #legal:hover, #illegal:hover {
+#start:hover, #sum2:hover, #roll:hover #legal:hover, #illegal:hover {
     background-color: #FF31AC;
 }
 
