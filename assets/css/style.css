@@ -4,9 +4,7 @@
     margin: 0;
     padding: 0;
     border: none;
-    box-sizing: border-box;
-
-    
+    box-sizing: border-box;    
 }
 
 br {
@@ -48,11 +46,13 @@ img {
     background-color: #fefff1;
     box-shadow: 8px 8px 8px grey;
     border-top: 20px solid grey;
+    border-radius: 5px;
 }
 
 .chapter h2, h3 {
     padding: 5px 0px;
 }
+
 
 /*Game Area*/
 #game-area {
@@ -69,9 +69,11 @@ img {
     background-color: #1D12FC;
     box-shadow: 5px 5px #FFE843;
     transform: skewX(-15deg);
+    margin: 20px;
+    border-radius: 5px;
 }
 
-#start:hover, #sum2:hover, #roll:hover #legal:hover, #illegal:hover {
+#start:hover, #sum2:hover, #roll:hover, #legal:hover, #illegal:hover {
     background-color: #FF31AC;
 }
 
