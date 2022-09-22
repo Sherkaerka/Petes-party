@@ -83,14 +83,20 @@ function chapterOne(){
         rightTurn.value ="Right";
         document.getElementById("game-area").appendChild(rightTurn);
         
+        let displayTurns = document.createElement("div");
+        displayTurns.setAttribute("id", "display-turns");
+        document.getElementById("game-area").appendChild(displayTurns);
+
         function pushLeft(){
             turns.push("left");
             console.log(turns);
+            document.getElementById("display-turns").innerHTML += "left";
         }
 
         function pushRight(){
             turns.push("right");
             console.log(turns);
+            document.getElementById("display-turns").innerHTML += "right";
         }
 
         function isEqual(turns, b){
