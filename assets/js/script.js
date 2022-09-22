@@ -119,11 +119,15 @@ function chapterOne(){
             console.log(isEqual(turns, b));
 
             if (isEqual(turns, b)) {
-                alert("yes");
-                chapterTwo();
+                alert("Yes! You're a walking map!");
+                chapterTwoTwo();
+                incrementTime();
             } else {
-                alert("no");
-                chapterTwo();
+                alert("Oh my! you're as lost as Pete's mom! Look at the time, you wasted so much. Now it's time to speed up!");
+                chapterTwoTwo();
+                incrementTime();
+                incrementTime();
+                incrementTime();
             }
         }
     }
@@ -225,12 +229,42 @@ function chapterTwo() {
     }
 }
 
+
+/**
+ * Adds Chapter 2.2
+ */
+
+function chapterTwoTwo(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Go empty handed or not?</h2><p>Ok, so we made it here somehow. Pete is standing on the sidewalk but with no present or any flowers. Going to the store is out of the question. He could go there empty handed and just explain or he could try to steal some flowers from a nearby garden. <br><h2>What do we do?</h2></p>";
+
+    let goToPartyOne = document.createElement("input");
+    goToPartyOne.setAttribute("id","go-to-party-one");
+    goToPartyOne.setAttribute("type", "button");
+    goToPartyOne.value ="Go to Party!";
+    goToPartyOne.addEventListener("click", partyOne);
+    document.getElementById("game-area").appendChild(goToPartyOne);
+    
+    let goToPartyTwo = document.createElement("input");
+    goToPartyTwo.setAttribute("id","go-to-party-two");
+    goToPartyTwo.setAttribute("type", "button");
+    goToPartyTwo.value ="Try to Steal flowers!";
+    goToPartyTwo.addEventListener("click", partyTwo);
+    document.getElementById("game-area").appendChild(goToPartyTwo);  
+
+}
+
+
 /**
  * Adds Chapter 3 including final challenge -Roll the dice
  */
 function chapterThree() {
-    document.getElementById("chapter-three").setAttribute("class", "chapter");
-    document.getElementById("chapter-three").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p>";
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+    
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p>";
 
     
     /**
@@ -238,21 +272,21 @@ function chapterThree() {
      */
     let diceImage = document.createElement("img");
     diceImage.setAttribute("id", "dice-pic");
-    document.getElementById("the-law").appendChild(diceImage);
+    document.getElementById("game-area").appendChild(diceImage);
     diceImage.src = "assets/images/die.png";
     
     let name1 = document.createElement("div");
     name1.setAttribute("id", "namesDice");
-    document.getElementById("the-law").appendChild(name1);
+    document.getElementById("game-area").appendChild(name1);
     document.getElementById("namesDice").innerHTML += "<h3>Pete vs. Bob</h3>";
 
     let peteDice = document.createElement("span");
     peteDice.setAttribute("id", "dice1");
-    document.getElementById("the-law").appendChild(peteDice);
+    document.getElementById("game-area").appendChild(peteDice);
 
     let policeDice = document.createElement("span");
     policeDice.setAttribute("id", "dice2");
-    document.getElementById("the-law").appendChild(policeDice);
+    document.getElementById("game-area").appendChild(policeDice);
 
 
     /**Roll-the-dice button */
@@ -261,7 +295,25 @@ function chapterThree() {
     rollButton.setAttribute("type", "button");
     rollButton.value ="Roll the dice";
     rollButton.addEventListener("click", rollTheDice);
-    document.getElementById("the-law").appendChild(rollButton);
+    document.getElementById("game-area").appendChild(rollButton);
+
+    let scorePete = document.createElement("div");
+    scorePete.setAttribute("id", "score-pete");
+    document.getElementById("game-area").appendChild(scorePete);
+    scorePete.innerHTML ="<h3>Pete's Score</h3><br>";
+
+    let resultPete = document.createElement("span");
+    resultPete.setAttribute("id", "result-pete");
+    document.getElementById("score-pete").appendChild(resultPete);
+
+    let scoreBob = document.createElement("div");
+    scoreBob.setAttribute("id", "score-bob");
+    document.getElementById("game-area").appendChild(scoreBob);
+    scoreBob.innerHTML ="<h3>Bob's Score</h3><br>";
+
+    let resultBob = document.createElement("span");
+    resultBob.setAttribute("id", "result-bob");
+    document.getElementById("score-bob").appendChild(resultBob);
 
 
 
@@ -279,12 +331,73 @@ function chapterThree() {
   
             else if (randomNumber1 < randomNumber2) {
                 incrementTime();
+                bobResult();
             }
   
             else {
-                location.href = 'victory.html';
+                peteResult();
+                incrementTime()
             };
     }
+}
+
+function peteResult(){
+    document.getElementById("result-pete").innerHTML ++;
+
+    if (document.getElementById("result-pete").innerText < 3) {
+        console.log("continue")
+    } else {
+        partyThree();
+    }
+}
+
+function bobResult(){
+    document.getElementById("result-bob").innerHTML ++;
+    
+    if (document.getElementById("result-bob").innerText < 3) {
+        console.log("continue")
+    } else {
+        partyFour();
+    }
+}
+
+/**
+ * Final scenes depending on user choices
+ */
+
+function partyOne(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML += "<h2>Hey, you made it!</h2><br><p>You helped Pete to the party. He's not feeling as a winner though, he got there later than necessary, again depending on his mother and without any flowers.</p><br><h3>One last choice are you happy or not?</h3><br><p>There are other ways to do it...</p>";
+}
+
+function partyTwo(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML += "<h2>Headache</h2><br><p>Pete sneakes into the garden and starts to search for the perfect color combination. He can't hear the old lady with her frying pan coming up behind him.<br>But he can almost hear the bang as she hit the back of his head... </p><br><h3>Game Over</h3><br><p>Try again if you dare!</p>";
+}
+
+function partyThree(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML +="Yeah!"
+}
+
+function partyFour(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML +="JAIL!"
+}
+
+function partyFive(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
+
+    document.getElementById("story-area").innerHTML +="Party has ended!"
 }
 
 /**
@@ -294,12 +407,11 @@ function chapterThree() {
  function incrementTime() {
 
     let oldTime = parseInt(document.getElementById("time").innerText);
-    document.getElementById("time").innerText = ++oldTime;
+    document.getElementById("time").innerText = --oldTime;
       
-    if (document.getElementById("time").innerText < 3) {
+    if (document.getElementById("time").innerText > 0) {
         console.log("continue")
     } else {
-        alert("Party over! You've made too many mistakes and have to start over...");
-        location.href = 'index.html';
+        partyFive();
     }
 }
