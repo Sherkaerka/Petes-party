@@ -16,6 +16,10 @@ body {
     font-weight: 300;
 }
 
+#background {
+    background: url('../images/party-birthday-banner-with-space-text.jpg') no-repeat center center;
+}
+
 h2, h3, h4{
     font-family: 'Noto Serif HK', sans-serif;
     font-weight: 500;
@@ -37,6 +41,16 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*Score feedback*/
+#score {
+    text-align: center;
+}
+
+#time {
+    font-size: xx-large;
+    color: green;
 }
 
 /*Story Area*/
@@ -127,37 +141,9 @@ img {
     justify-content: center;
 }
 
-
-/*Score feedback*/
-#score {
-    text-align: center;
-    border-top: 2px solid #FF31AC;
-}
-
-#time {
-    font-size: xx-large;
-}
-
-/*Victory page*/
-
-#victory {
-    text-align: center;
-}
-
-#congrats {
-    width: 50%;
-    height: auto;
-    margin-top: 20px;
-}
-
-#again-button {
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
 footer {
+    height: 50px;
     border-top: 2px solid #FF31AC;
-    height: 30px;
 }
 
 /*Add media queries for larger devices*/
