@@ -51,6 +51,7 @@ img {
 #time {
     font-size: xx-large;
     color: green;
+    text-shadow: 1px 1px 2px lightgreen;
 }
 
 /*Story Area*/
@@ -71,11 +72,13 @@ img {
 /*Game Area*/
 #game-area {
     text-align: center;
+    min-height: 150px;
+    margin-top: 30px;
 }
 
 
 /* Button design*/
-#start, #sum2, #roll, #illegal, #legal {
+#start, #sum2, #submit, #roll, #illegal, #legal, #checkTurns, #go-to-party-one, #go-to-party-two{
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -87,13 +90,45 @@ img {
     border-radius: 5px;
 }
 
-#start:hover, #sum2:hover, #roll:hover, #legal:hover, #illegal:hover {
+#start:hover, #sum2:hover, #submit:hover, #roll:hover, #legal:hover, #illegal:hover, #checkTurns:hover, #go-to-party-one:hover, #go-to-party-two:hover {
     background-color: #FF31AC;
 }
 
 #submit, #sum2, #roll {
     display: block;
     margin: 20px auto;
+}
+
+#turnRight {
+    display: inline-block;
+    color: #fefff1;
+    text-decoration: none;
+    padding: 5px 40px;
+    background-color: green;
+    box-shadow: 5px 5px greenyellow;
+    transform: skewX(-15deg);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#turnRight:hover {
+    background-color: lightgreen;
+}
+
+#turnLeft {
+    display: inline-block;
+    color: #fefff1;
+    text-decoration: none;
+    padding: 5px 40px;
+    background-color: red;
+    box-shadow: 5px 5px pink;
+    transform: skewX(-15deg);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#turnLeft:hover {
+    background-color: orange;
 }
 
 /*Pick The Lock*/
@@ -111,12 +146,22 @@ img {
 
 /*Input fields*/
 
-#num1, #num2, #num3, #sum1, #dice1, #dice2{
+#num1, #num2, #num3{
     display: inline-flex;
     width: 50px;
     height: 50px;
     border: 3px solid black;
     font-size: 40px;
+    box-shadow: 2px 2px 2px 2px grey inset;
+}
+
+#sum1, #dice1, #dice2{
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    font-size: 40px;
+    background-color: white;
 }
 
 #dice1, #dice2 {
