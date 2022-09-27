@@ -9,9 +9,7 @@ startGame.addEventListener("click", chapterOne);
  */
 
 function chapterOne(){
-
     document.getElementById("top-image").src= "assets/images/school.jpg";
-    
 
     document.getElementById("game-area").innerHTML ="";
     document.getElementById("story-area").innerHTML = "";
@@ -35,11 +33,13 @@ function chapterOne(){
    
     /** Walking subchapter 1.1 */
     function startWalking(){
+        document.getElementById("top-image").src= "assets/images/road.jpg";
+        
         document.getElementById("story-area").innerHTML = "";
         document.getElementById("game-area").innerHTML = "";
         incrementTime();
 
-        document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Remenber the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>"
+        document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Memorize the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>"
         
         
         let revealTurns = document.createElement("input");
@@ -130,6 +130,8 @@ function chapterOne(){
 
     /** Pick the lock subchapter 1.2 */
     function lockPick(){
+        document.getElementById("top-image").src= "assets/images/sixtens_bike.jpg";
+
         document.getElementById("story-area").innerHTML = "";
         document.getElementById("game-area").innerHTML = "";
 
@@ -186,6 +188,8 @@ function chapterOne(){
  * Add chapter 2 and challenge -Get the flowers
  */
 function chapterTwo() {
+    document.getElementById("top-image").src= "assets/images/store.jpg";
+
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
@@ -231,11 +235,14 @@ function chapterTwo() {
  */
 
 function chapterTwoTwo(){
+    document.getElementById("top-image").src= "assets/images/gift.jpg";
+    
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Go empty handed or not?</h2><p>Ok, so we made it here somehow. Pete is standing on the sidewalk but with no present or any flowers. Going to the store is out of the question. He could go there empty handed and just explain or he could try to steal some flowers from a nearby garden. <br><h2>What do we do?</h2></p>";
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Go empty handed or not?</h2><p>Ok, so we made it here somehow. Pete is standing on the sidewalk but with no present or any flowers. Going to the store is out of the question. He could go there empty handed and just explain or he could try to steal some flowers from a nearby garden. <br></p>";
 
+    document.getElementById("game-area").innerHTML += "<h3>How's it gonna be?</h3>"
     let goToPartyOne = document.createElement("input");
     goToPartyOne.setAttribute("id","go-to-party-one");
     goToPartyOne.setAttribute("type", "button");
@@ -257,6 +264,8 @@ function chapterTwoTwo(){
  * Adds Chapter 3 including final challenge -Roll the dice
  */
 function chapterThree() {
+    document.getElementById("top-image").src= "assets/images/bobs_car.jpg";
+
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
     
@@ -362,6 +371,7 @@ function bobResult(){
  */
 
 function partyOne(){
+    document.getElementById("top-image").src= "assets/images/logo.png";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
@@ -369,6 +379,7 @@ function partyOne(){
 }
 
 function partyTwo(){
+    document.getElementById("top-image").src= "assets/images/logo.png";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
@@ -376,6 +387,7 @@ function partyTwo(){
 }
 
 function partyThree(){
+    document.getElementById("top-image").src= "assets/images/logo.png";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
@@ -383,6 +395,8 @@ function partyThree(){
 }
 
 function partyFour(){
+    document.getElementById("top-image").src= "assets/images/jail.jpg";
+    
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
@@ -390,6 +404,7 @@ function partyFour(){
 }
 
 function partyFive(){
+    document.getElementById("top-image").src= "assets/images/logo.png";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
