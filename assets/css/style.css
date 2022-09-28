@@ -83,7 +83,7 @@ img {
 
 
 /* Button design*/
-#start, #sum2, #submit, #roll, #illegal, #legal, #checkTurns, #go-to-party-one, #go-to-party-two{
+#start, #sum2, #submit, #roll, #illegal, #legal, #checkTurns, #go-to-party-one, #go-to-party-two, #try-again{
     display: inline-block;
     color: #fefff1;
     text-decoration: none;
@@ -95,7 +95,7 @@ img {
     border-radius: 5px;
 }
 
-#start:hover, #sum2:hover, #submit:hover, #roll:hover, #legal:hover, #illegal:hover, #checkTurns:hover, #go-to-party-one:hover, #go-to-party-two:hover {
+#start:hover, #sum2:hover, #submit:hover, #roll:hover, #legal:hover, #illegal:hover, #checkTurns:hover, #go-to-party-one:hover, #go-to-party-two:hover, #try-again:hover {
     background-color: #FF31AC;
 }
 

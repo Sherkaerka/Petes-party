@@ -371,27 +371,66 @@ function bobResult(){
  */
 
 function partyOne(){
-    document.getElementById("top-image").src= "assets/images/logo.png";
+    document.getElementById("top-image").src= "assets/images/score-hey.png";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML += "<h2>Hey, you made it!</h2><br><p>You helped Pete to the party. He's not feeling as a winner though, he got there later than necessary, again depending on his mother and without any flowers.</p><br><h3>One last choice are you happy or not?</h3><br><p>There are other ways to do it...</p>";
+    document.getElementById("story-area").innerHTML += "<h2>Hey, you made it, but...</h2><br><p>Pete's not feeling as a winner though, he got there later than necessary, again depending on his mother and without any flowers.</p><br><h3>One last choice are you happy or not?</h3><br><p>There are other ways to do it...</p>";
+
+    document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>7</strong> out of 10</h3>";
+    
+    let tryAgain = document.createElement("input");
+        tryAgain.setAttribute("id","try-again");
+        tryAgain.setAttribute("type", "button");
+        tryAgain.addEventListener("click", startOver);
+        tryAgain.value ="I can do better!";
+        document.getElementById("game-area").appendChild(tryAgain);
+
+    function startOver(){
+        location.href = "index.html";    
+    }
 }
 
 function partyTwo(){
-    document.getElementById("top-image").src= "assets/images/logo.png";
+    document.getElementById("top-image").src= "assets/images/flying_pan.jpg";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML += "<h2>Headache</h2><br><p>Pete sneakes into the garden and starts to search for the perfect color combination. He can't hear the old lady with her frying pan coming up behind him.<br>But he can almost hear the bang as she hit the back of his head... </p><br><h3>Game Over</h3><br><p>Try again if you dare!</p>";
+    document.getElementById("story-area").innerHTML += "<h2>Headache</h2><br><p>Pete sneakes into the garden and starts to search for the perfect color combination. He can't hear the old lady with her frying pan coming up behind him.<br>But he can almost hear the bang as the pan hit the back of his head... </p><br><h3>Why did you do this to Pete?</h3><br><p>Waking up on the sidewalk with a terrible pain Pete can see that the party has ended and starts to walk the long way home.</p>";
+
+    document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>3</strong> out of 10</h3>";
+
+    let tryAgain = document.createElement("input");
+    tryAgain.setAttribute("id","try-again");
+    tryAgain.setAttribute("type", "button");
+    tryAgain.addEventListener("click", startOver);
+    tryAgain.value ="I can do better!";
+    document.getElementById("game-area").appendChild(tryAgain);
+
+    function startOver(){
+        location.href = "index.html";    
+    }
 }
 
 function partyThree(){
-    document.getElementById("top-image").src= "assets/images/logo.png";
+    document.getElementById("top-image").src= "assets/images/dancing.jpg";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="Yeah!"
+    document.getElementById("story-area").innerHTML +="<h2>You won, congratulations!</h2><br><p>You've made all the right turns, had some luck and guided Pete with excellence!<br>Now he is at the party dancing with his best friend!</p><br><h3>This adventure ends here</h3><br><p>This game has several storylines and you can always try another way. Thanks for playing!</p>"
+
+    document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>10</strong> out of 10</h3>";
+
+    let tryAgain = document.createElement("input");
+    tryAgain.setAttribute("id","try-again");
+    tryAgain.setAttribute("type", "button");
+    tryAgain.addEventListener("click", startOver);
+    tryAgain.value ="Try another way";
+    document.getElementById("game-area").appendChild(tryAgain);
+
+    function startOver(){
+        location.href = "index.html";    
+    }
 }
 
 function partyFour(){
@@ -400,15 +439,42 @@ function partyFour(){
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="JAIL!"
+    document.getElementById("story-area").innerHTML +="<h2>Pete has to follow Bob down to the station!</h2><br><p>You sure had some fun along the way, but Bob is such a master with the dice! This is the end of the road for this time.</p><br><br><h3>You have to practice and then try again</h3><br><p>Thanks for playing, try again and see if you can improve your score with other choices and challenges.</p><br"
+
+    document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>1</strong> out of 10</h3>";
+
+
+    let tryAgain = document.createElement("input");
+    tryAgain.setAttribute("id","try-again");
+    tryAgain.setAttribute("type", "button");
+    tryAgain.addEventListener("click", startOver);
+    tryAgain.value ="I can do better!";
+    document.getElementById("game-area").appendChild(tryAgain);
+
+    function startOver(){
+        location.href = "index.html";    
+    }
 }
 
 function partyFive(){
-    document.getElementById("top-image").src= "assets/images/logo.png";
+    document.getElementById("top-image").src= "assets/images/times_up.jpg";
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="Party has ended!"
+    document.getElementById("story-area").innerHTML +="<h2>Party has ended!</h2><br><p>While you were fooling around making the wrong turns the music stopped and everyone went home.</p><br><br><h3>Never give up!</h3><br><p>There are many ways to do this and just hit the button below and go for it again! Thanks for playing!</p>"
+
+    document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>2</strong> out of 10</h3>";
+
+    let tryAgain = document.createElement("input");
+    tryAgain.setAttribute("id","try-again");
+    tryAgain.setAttribute("type", "button");
+    tryAgain.addEventListener("click", startOver);
+    tryAgain.value ="I can do better!";
+    document.getElementById("game-area").appendChild(tryAgain);
+
+    function startOver(){
+        location.href = "index.html";    
+    }
 }
 
 /**
