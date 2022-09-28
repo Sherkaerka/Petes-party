@@ -196,6 +196,11 @@ img {
     padding: 10px 10px;
 }
 
+#flower,#snack, #gum{
+    color:#FF31AC;
+    font-weight: bold;
+}
+
 
 /*Footer*/
 footer {

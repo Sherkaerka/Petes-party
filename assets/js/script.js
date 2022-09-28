@@ -200,13 +200,14 @@ function chapterTwo() {
     document.getElementById("game-area").innerHTML ="";
 
     document.getElementById("story-area").setAttribute("class", "chapter");
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong><span id='flower'>6.25</span></strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>So Pete's got a $50-bill. The flowers will be $<span id='flower'>0</span> and a piece of snack $<span id='snack'>0</span> and some pink chewing gum too at $<span id='gum'>0</span>.<br></p>";
 
+    document.getElementById("game-area").innerHTML += "<h3>How much will there be left?</h3>";
 
     /** Randomized prizes */
-    let flowerPrice = Math.floor(Math.random() *25) + 1;
-    let snackPrice = Math.floor(Math.random() *15) + 1;
-    let gumPrice = Math.floor(Math.random() *5) +1;
+    document.getElementById("flower").innerHTML = Math.floor(Math.random() *25) + 1;
+    document.getElementById("snack").innerHTML = Math.floor(Math.random() *15) + 1;
+    document.getElementById("gum").innerHTML = Math.floor(Math.random() *5) + 1;
 
     /**Input field */
     let guessSum = document.createElement("input");
@@ -227,9 +228,13 @@ function chapterTwo() {
 
     function checkSecondAnswer() {
         let cashierGuess = document.getElementById("sum1").value;
-        let trueCashier = 1.8;
+        let flowerPrice = document.getElementById("flower").innerHTML;
+        let snackPrice = document.getElementById("snack").innerHTML;
+        let gumPrice = document.getElementById("gum").innerHTML;
 
-        let resultTwo = cashierGuess == trueCashier;
+        let sumUp = 50 - flowerPrice - snackPrice -gumPrice;
+
+        let resultTwo = cashierGuess == sumUp;
 
         if (resultTwo) {
             alert("You're a math genius! Now let's go give that girl her birthday flowers!");
