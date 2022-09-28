@@ -196,6 +196,10 @@ img {
     padding: 10px 10px;
 }
 
+#result-pete, #result-bob {
+    font-weight: bold;
+}
+
 #flower,#snack, #gum{
     color:#FF31AC;
     font-weight: bold;
