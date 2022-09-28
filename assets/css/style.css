@@ -191,6 +191,13 @@ img {
     justify-content: center;
 }
 
+#score-pete, #score-bob, #result-pete, #result-bob {
+    display: inline-flex;
+    padding: 10px 10px;
+}
+
+
+/*Footer*/
 footer {
     height: 50px;
     border-top: 2px solid #FF31AC;

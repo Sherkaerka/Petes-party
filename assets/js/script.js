@@ -141,16 +141,22 @@ function chapterOne(){
         let firstDigit = document.createElement("input");
         firstDigit.setAttribute("id","num1");
         firstDigit.setAttribute("type", "number");
+        firstDigit.setAttribute("max", "9");
+        firstDigit.setAttribute("min", "0");
         document.getElementById("game-area").appendChild(firstDigit);
         
         let secondDigit = document.createElement("input");
         secondDigit.setAttribute("id","num2");
         secondDigit.setAttribute("type", "number");
+        secondDigit.setAttribute("max", "9");
+        secondDigit.setAttribute("min", "0");
         document.getElementById("game-area").appendChild(secondDigit);
         
         let thirdDigit = document.createElement("input");
         thirdDigit.setAttribute("id","num3");
         thirdDigit.setAttribute("type", "number");
+        thirdDigit.setAttribute("max", "9");
+        thirdDigit.setAttribute("min", "0");
         document.getElementById("game-area").appendChild(thirdDigit);
 
         /** Try code button */
@@ -194,7 +200,13 @@ function chapterTwo() {
     document.getElementById("game-area").innerHTML ="";
 
     document.getElementById("story-area").setAttribute("class", "chapter");
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong>6.25</strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>I got a <strong>10</strong>-bill, the flowers will be <strong><span id='flower'>6.25</span></strong> and a piece of snack <strong>1.50</strong> and some pink chewing gum too at <strong>0.45</strong>. “Hmmm…what will that be in change?”<br></p>";
+
+
+    /** Randomized prizes */
+    let flowerPrice = Math.floor(Math.random() *25) + 1;
+    let snackPrice = Math.floor(Math.random() *15) + 1;
+    let gumPrice = Math.floor(Math.random() *5) +1;
 
     /**Input field */
     let guessSum = document.createElement("input");
@@ -352,7 +364,9 @@ function peteResult(){
     if (document.getElementById("result-pete").innerText < 3) {
         console.log("continue")
     } else {
-        partyThree();
+        setTimeout(function() {
+            partyThree();
+        },2000);
     }
 }
 
@@ -362,7 +376,9 @@ function bobResult(){
     if (document.getElementById("result-bob").innerText < 3) {
         console.log("continue")
     } else {
-        partyFour();
+        setTimeout(function() {
+            partyFour();
+        },2000);
     }
 }
 
