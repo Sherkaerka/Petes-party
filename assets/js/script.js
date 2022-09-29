@@ -134,8 +134,13 @@ function chapterOne(){
 
         document.getElementById("story-area").innerHTML = "";
         document.getElementById("game-area").innerHTML = "";
-
-        document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p>"
+        incrementTime();
+        
+        /**De-activates keyboard */
+        document.onkeydown = function (e) {
+            return false;
+        }
+        document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p><br><h3>Tip:</h3><br><p>It's a combination lock, you can't use your keybord.</p>"
     
         /** Combination lock */
         let firstDigit = document.createElement("input");
@@ -199,10 +204,13 @@ function chapterTwo() {
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").setAttribute("class", "chapter");
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>So Pete's got a $50-bill. The flowers will be $<span id='flower'>0</span> and a piece of snack $<span id='snack'>0</span> and some pink chewing gum too at $<span id='gum'>0</span>.<br></p>";
+    /**Re-activates keybord */
+    document.onkeydown = function (e) {
+        return true;
+    }
 
-    document.getElementById("game-area").innerHTML += "<h3>How much will there be left?</h3>";
+    document.getElementById("story-area").setAttribute("class", "chapter");
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>So Pete's got a $50-bill. The flowers will be $<span id='flower'>0</span> and a piece of snack $<span id='snack'>0</span> and some pink chewing gum too at $<span id='gum'>0</span>.<br>How much will there be left?</p>";
 
     /** Randomized prizes */
     document.getElementById("flower").innerHTML = Math.floor(Math.random() *25) + 1;
