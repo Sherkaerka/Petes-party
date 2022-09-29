@@ -6,21 +6,12 @@ The Pete's Party site has be throughly tested. All the code has been run through
 
 The HTML validator results for each page are below:
 
-* Home
-![Validatione home](./assets/readme-images/validation%20home.png)
-
-* Joe's DIY
-![Validation services](./assets/readme-images/validation%20services.png)
-
-* Contact
-![Contact validation](./assets/readme-images/Validation%20contact.png)
-
-* Contact form validation
-![Form validation](./assets/readme-images/validation%20form%20confirmation.png)
+* Index.html
+![Validatione Index.html](./assets/readme-images/htmlvalidation.PNG)
 
 The CSS validator results are below:
 
-![Css validation](./assets/readme-images/css%20validation.png)
+![Css validation](./assets/readme-images/cssvalidation.PNG)
 
 # Resposiveness test
 The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Responsive Design Checker](https://responsivedesignchecker.com/).
@@ -38,32 +29,23 @@ Parameters checked and passed:
 * Render
 * Images
 * Links
+* Buttons
+* Inputs
 
 # Browser compatibillity
-Joe's Garage site was tested on the following browsers with no visible issues for the user. Google Chrome, Microsoft Edge, Safari and Mozilla Firefox. Appearance, functionality and responsiveness were consistent throughout for a range of device sizes and browsers.
+Pete's Party site was tested on the following browsers with no visible issues for the user. Google Chrome, Microsoft Edge, Safari and Mozilla Firefox. Appearance, functionality and responsiveness were consistent throughout for a range of device sizes and browsers.
 
 # User stories testing
 * As a As a user I want to be able to navigate through the whole site smoothly, no matter device.
-    * Main navigation on top of every page.
-    * Useful links in hte footer on every page.
+    * The only choice of navigation is the house-icon present on all chapters and challenges. It will restart the game.
 * As a user I quickly want to understand the purpose of the site upon loading it.
-    * Hero image hints that it has to do with cars.
-    * Quotes and Welcome section quickly gets to te point.
-* As a user I want to see what services are being offered and to what cost.
-    * Classic services presented on home page.
-    * Visitors shoul be inspires and further DIY services are presented on Joe's DIY-page.
-* As a user I want to easily be able to contact Joe's Garage for more information or help with my car.
-    * Almost the first thing your eyes will land on is the 24 hour service phone number.
-    * Contact in the main and footer links
-* As a user I want to be inspired and to challenge myself to maybe one day fix my own car.
-    * Joe wishes to change the classic garage services and increase the interest in mechanics. This is being entitled with a complete sub-page: Joe's DIY.
-* As a user I want to know some history and basic facts about Joe's Garage.
-    * There is a short welcome and about section on the home-page.
-* As a user I want to know how other peoples' experiences with Joe's Garage has been.
-    * Customer testimonials can be found on the home-page and this section is prepared to handle more feedback from customers.
-* As a user I want to connect with Joe's Garage on social media and become a part of their community.
-    * In the footer the social icons will guide you.
-    * Also the instruction videos are thought to further encourage social connections.
+    * 
+* As a user I want to understand how to play the game.
+* As a user I want to know what the goal is.
+* As a user I want to be inspired to try the game agian.
+* As a user I want to have feedback on my progress and result.
+* As a user I want to tell my friends about this great game.
+  
 
 ### Known bugs, minor issues and solutions:
 
