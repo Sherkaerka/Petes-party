@@ -248,7 +248,7 @@ function chapterTwo() {
 
 
 /**
- * Adds Chapter 2.2
+ * Adds Chapter 2.2 Go Empty handed or not?
  */
 
 function chapterTwoTwo(){
@@ -278,7 +278,7 @@ function chapterTwoTwo(){
 
 
 /**
- * Adds Chapter 3 including final challenge -Roll the dice
+ * Adds Chapter 3 -Roll the dice
  */
 function chapterThree() {
     document.getElementById("top-image").src= "assets/images/bobs_car.jpg";
@@ -286,7 +286,7 @@ function chapterThree() {
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
     
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p>";
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p><br><h3>First one to 3 wins.</h3>";
 
     
     /**

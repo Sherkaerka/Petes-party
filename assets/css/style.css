@@ -208,9 +208,23 @@ img {
 
 /*Footer*/
 footer {
-    height: 50px;
-    border-top: 2px solid #FF31AC;
+    height: 25px;
+    padding-top: 2px;
+    background-color: #FF31AC;
+    text-align: right;
+    padding-right: 5px;
 }
+
+#social li {
+    list-style-type: none;
+    display: inline;
+}
+
+.icon {
+    color: white;
+}
+
+
 
 /*Add media queries for larger devices*/
 
