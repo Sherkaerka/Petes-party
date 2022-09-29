@@ -22,22 +22,12 @@ Live site can be visited at: [Pete's Party website](https://sherkaerka.github.io
         * [Typography](#typography-a-nametypographya)
         * [Color Scheme](#color-scheme-a-namecolorschemea)
 * [Features](#features-a-namefeaturesa)
-    * [Home](#home-a-namehomea)
+    * [Start](#start-a-namestarta)
         * [Navigation Menu](#navigation-menu-a-namenavigationmenua)
-        * [24 Hour Service](#24-hour-service-number-a-name24ha)
-        * [Quotes](#quotes-a-namequotesa)
-        * [About](#about-a-nameabouta)
-        * [Services](#services-a-nameservicesa)
-        * [Testimonials](#testimonials-a-nametestimonialsa)
+        * [Time Left](#time-left-a-nametimelefta)
+        * [Story Area](#story-area-a-namestoryareaa)
+        * [Game Area](#game-area-a-namegameareaa)
         * [Footer](#footer-a-namefootera) 
-    * [Joe's DIY](#joes-diy-a-namejoesdiya)
-        * [Buy our DIY kits](#buy-our-diy-kits-a-namebuydiya)
-        * [Instruction Videos](#instruction-videos-a-nameinstructionvideosa)
-    * [Contact](#contact-a-namecontacta)
-        * [Contact Details](#contact-details-a-namecontactdetailsa)
-        * [Map](#map-a-namemapa)
-        * [Contact Form](#contact-form-a-namecontactforma)
-    * [Form Confirmation](#form-confirmation-a-nameformconfirmationa)
     * [Future Features](#future-features-a-namefuturefeaturesa)
 * [Technologies Used](#technologies-used-a-nametechuseda)
 * [Testing](#testing-a-nametestinga)
@@ -58,143 +48,81 @@ Live site can be visited at: [Pete's Party website](https://sherkaerka.github.io
 * As a user I want to know what the goal is.
 * As a user I want to be inspired to try the game agian.
 * As a user I want to have feedback on my progress and result.
+* As a user I want to tell my friends about this great game.
+
 
 [Back to top](#table-of-contents)
 
 ### Wireframes <a name="wireframes"></a>
-Wireframes to Joe's Garage were created in [Balsamiq](https://balsamiq.com/) and shows general ideas in fullscreen and smartphone set-up. As seen below the basic idea is to stack and decrease padding when device become smaller.
+Wireframes to Pete's Party were created in [Balsamiq](https://balsamiq.com/) and shows general ideas in smartphone set-up. As seen below the basic idea is to try mobile-first design and only set max-width as media query for larger screens.
 
-![Balsamic fullscren](./assets/readme-images/balsamicfullscreen.png)
-
-![Balsamic mobile](./assets/readme-images/balsamicmobile.png)
+![Balsamic mobile](./assets/readme-images/balsamiq.PNG)
 
 [Back to top](#table-of-contents)
 
 ### Site Structures <a name="sitestructures"></a>
-Joe's Garage site has three main pages: **home**, **Joe's DIY** and **Contact**. There is also a hidden fourth page that will show a Thanks you for contacting us, when contact form has been submitted. The footer also contains links to map, contact form and Joe's DIY.
+Pete's Party is a one-page site and uses javascript to remove and add content as the player interacts with the game. The basic stucture is a story-area where the chapters are presented and a game-area where the challenges and interaction takes place.
 
 [Back to top](#table-of-contents)
 
 ### Design Choices <a name="designchoices"></a>
-I wanted to create a fresh and clean site but with some classic garage feeling.
+Since it's really basic javascript functions in use I wished to apply some sort of retro-feeling about the page. Almost like you found a really old and forgotten site that just happened to be a bit responsive.
 
 #### Typography <a name="typography"></a>
 
-Body and headers uses different font weight and spacing of Open Sans with a fallback to sans-serif. The logo to Joe's garage that s displayed in both the header and footer is Yellowtail.
+Body uses different font weight and spacing of Roboto with a fallback to sans-serif. Heagings usiing Noto Serif HK with a fallback to sans-serif. The logo to Pete's Party with a retro-joystick is created with [Freepik](https://www.freepik.com/).
 
 #### Color scheme <a name="colorscheme"></a>
 
-![Color Scheme](./assets/readme-images/colorscheme.png)
+![Color Scheme](./assets/readme-images/colorscheme.PNG)
 
 [Back to top](#table-of-contents)
 
 
 ## Features <a name="features"></a>
-Joe's Garage is set up as a basic business website with some more modern touch covering the most important functions to interact with visitors.
+Pete's party is set up as a basic javascript game with the ambition to include a few different challenges and paths to interact with the player and to encourage the player to play several times and try different ways of completing the game.
 
-### Home <a name="home"></a>
-The home page starts out with a little bit different layout with a larger hero image in the background. This image changes on smaller screens to render more nicely as seen on the [responsive image](#welcome-to-joes-garage) further up.
+### Start <a name="start"></a>
+The layout of the page will be more or less static throughout the game:
+
+![Start page](./assets/readme-images/startpage.PNG)
+
 
 #### Navigation menu <a name="navigationmenu"></a>
-Navigation menu shown on every page. On large and medium screens it appears top right and om smaller screens it is moved below Joe's Garage logo. On smaller screen we also add some background color to make sure the contrast is good still with the new hero image.
-
-The menu has hover coloring and an underscore on the actual page being visited.
-
-![Menu](./assets/readme-images/menu.png)
+As seen above the navigation menu contains an house-icon that whenever clicked will reset the game and take you back to the starting page.
 <br>
 [Back to top](#table-of-contents)
 
-#### 24 hour service number <a name="24h"></a>
-Since we are presenting a garage cars do not only need service, but sometimes they break down. Therefor Joe's 24 hour service number get some extra display on the home-page. Visually it acts like the menu thus getting a background color for contrast on smaller screens. It also has some extra glow added to it to stand out, abit like a tube light.
+#### Time left <a name="timeleft"></a>
+When the game start's you have 10 hours until the party is over. Then as you play the game, depending on your choices and abiliity to solve the challenges it will count down. Unless you make it in time it will be Game Over.
 
-![24 hour service phone number](./assets/readme-images/24h.png)
+<br>
 [Back to top](#table-of-contents)
 
-#### Quotes <a name="quotes"></a>
-Quotes are a recurring section on all pages. It's there to give a more personal feel and touch to the website.
+#### Story area <a name="storyarea"></a>
+The Story area is where the chapters and story is presented. It's basically meant as an interactive book.
 
-![Quote](./assets/readme-images/quote.png)
+![Story Area](./assets/readme-images/storyarea.PNG)
 [Back to top](#table-of-contents)
 
-#### About <a name="about"></a>
-The About section is a combined welcome to us, give some short history to build confidence and a wish to see more of Joe's. This is also where the "block-design" is introduced with a 50% width each. Title on one side and content on the other.
+#### Game area <a name="gamearea"></a>
+The Game area is where the player either make choices of what to do or interact in challenges.
 
-![About](./assets/readme-images/about.png)
+![About](./assets/readme-images/gamearea.PNG)
 [Back to top](#table-of-contents)
 
-#### Services <a name="services"></a>
-So this is where the classic services are being presented. This is when you book an appointment leave your car and pick it up when it's ready. It give some short info about the job and at what price-range it starts. And just like the about-section it uses the box 50-50 style.
-
-![Services](./assets/readme-images/services.png)
-[Back to top](#table-of-contents)
-
-#### Testimonials <a name="testimonials"></a>
-Testimonials are being used to show that customer satisfaction is top priority, demonstrate transparence, build confidence etc.
-This is aslo done together with a quote or a statement.
-
-![Testimonials](./assets/readme-images/testimonials.png)
-[Back to top](#table-of-contents)
 
 #### Footer <a name="footer"></a>
-Appears in the exact same way on all pages. Shows logotype, som useful internal links and social buttons. Also a copyright line is at the very bottom.
+Appears in the exact same way on all pages. Shows social buttons and are intended to share the game to friends.
 
-![Footer](./assets/readme-images/footer.png)
-[Back to top](#table-of-contents)
-
-### Joe's DIY <a name="joesdiy"></a>
-The DIY is a new concept that as acontrast to us being more and more isolated with less human interaction instead invites and encourages the customer to buy all necessary service parts and do the job themselves, next to experienced mechanics.
-
-[Back to top](#table-of-contents)
-
-#### Buy our DIY kits <a name="buydiy"></a>
-The kits being presented with the same 50-50 boxes. And just like with the classic services a pricerange is given.
-
-![Buy our DIY kits](./assets/readme-images/diy.png)
-[Back to top](#table-of-contents)
-
-#### Instruction videos <a name="instructionvideos"></a>
-As part of the DIY-concept these can work like instructions on how to carry out the service. See it as some pre-studies and yet another way to connect with potential customers. These are iframes so that they will work and be controlled on the website.
-
-![Instruction videos](./assets/readme-images/instructionvideos.png)
-[Back to top](#table-of-contents)
-
-### Contact <a name="contact"></a>
-Classic contact page with contact details, map and a contact form. Starting with a quote or a promise that we always get back to the customer within one working day. 
-
-[Back to top](#table-of-contents)
-
-#### Contact Details <a name="contactdetails"></a>
-Contact Details is being presented with the same 50-50 boxes along with the map.
-
-![Details and map](./assets/readme-images/detailsmap.png)
-[Back to top](#table-of-contents)
-
-#### Map <a name="map"></a>
-Map presented being a iframe with google maps. Picture as above.
-
-[Back to top](#table-of-contents)
-
-#### Contact form <a name="contactform"></a>
-A clean and nice contact form. State who you are how we can get back to you, a dropdown to categorize the message and a freetext area. The send button has the same button design that goes for the whole site.
-
-![Contact Form](./assets/readme-images/contactform.png)
-<br>
-[Back to top](#table-of-contents)
-
-### Form Confirmation <a name="formconfirmation"></a>
-A hidden landing page that gives the customer feedback that the message has been received and what will happen next. This page still has the same header and footer so that the user easily can navigate back.
-
-![Form Confirmation](./assets/readme-images/feedbackform.png)
 [Back to top](#table-of-contents)
 
 ### Future Features <a name="futurefeatures"></a>
 Some possible improvements but not limited to:
 
-* Chatbot
-* Webshop for DIY-kits and merch
-* Online booking system
-* Integrate with some customer rating system
-* Attach images to contact form
+* Add more alternative paths and challenges
+* Add music and soundeffects
+* Make all challenges dynamic, meaning that order and content change each time
 
 [Back to top](#table-of-contents)
 
@@ -202,6 +130,7 @@ Some possible improvements but not limited to:
 
 * HTML5 - provides the content and structure for the website.
 * CSS3 - provides the styling.
+* Javascript - provides the behaviour of the website. 
 * Balsamiq - used to create the wireframes.
 * Gitpod - used to deploy the website.
 * Github - used to host and edit the website.
@@ -210,7 +139,7 @@ Some possible improvements but not limited to:
 
 ## Testing <a name="testing"></a>
 
-Please refer to [testing protocol](./TESTING.md) for more information on testing Joe's Garage.
+Please refer to [testing protocol](./TESTING.md) for more information on testing Pete's Party.
 
 [Back to top](#table-of-contents)
 
@@ -223,18 +152,18 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
 3. Under **Source**, select the branch to **master**, then click **save**.
 4. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-![Deploy](./assets/readme-images/deploy.png)
+![Deploy](./assets/readme-images/deploy.PNG)
 
-This is the link to the live Github repository: https://github.com/Sherkaerka/Joes-Garage
+This is the link to the live Github repository: https://github.com/Sherkaerka/Petes-party
 
 ### How to fork the repository on Github <a name="fork"></a>
 
 A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository;
 
-1. Log in to GitHub and locate the [repository](https://github.com/Sherkaerka/Joes-Garage).
+1. Log in to GitHub and locate the [repository](https://github.com/Sherkaerka/Petes-party).
 2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the button to create a copy of the original repository in your GitHub Account.
 
-![How to fork on Github](./assets/readme-images/fork.png)
+![How to fork on Github](./assets/readme-images/fork.PNG)
 
 ### How to create a local clone <a name="localclone"></a>
 The method from cloning a project from GitHub is below:
@@ -242,7 +171,7 @@ The method from cloning a project from GitHub is below:
 1. Under the repository’s name, click on the **code** tab.
 2. In the Clone with HTTPS section, click on the **copy icon** to copy the given URL.
 
-![How to clone in Github](./assets/readme-images/clone.png)
+![How to clone in Github](./assets/readme-images/clone.PNG)
 
 [Back to top](#table-of-contents)
 
@@ -251,22 +180,18 @@ The method from cloning a project from GitHub is below:
 ### Content <a name="content"></a>
 The font came from [Google Fonts](https://fonts.google.com/about).
 Fonts were choosen with [Canva](http://www.canva.com)
-The map is embedded from [Google Maps](https://www.google.com/maps/?hl=sv).
-The Slate colour palate was compiled by [UI/UX Colour Palette](https://www.instagram.com/ui.ux.palette/).
+The Slate colour palate was compiled from the logo [Freepik](https://www.freepik.com/).
 The icons came from [Font Awesome](https://fontawesome.com/).
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
 
 ### Media <a name="media"></a>
-Large/medium screen hero image by Logan Meis via [Unsplash](https://unsplash.com/).
-Small screen hero image by Claude Gabriel via [Unsplash](https://unsplash.com/).
-[Youtube](https://www.youtube.com/) video Brakes Service by [Eric The Car Guy](https://www.youtube.com/c/ericthecarguy)
-[Youtube](https://www.youtube.com/) video Oil Service by [Chris Fix](https://www.youtube.com/c/chrisfix)
+All images are taken from [Freepik](https://www.freepik.com/).
 
 [Back to top](#table-of-contents)
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
-Joe's Garage is a non-profit no money involved site that was developed as Milestone Project no1 for [Code Institute](https://codeinstitute.net "Code Institute"). Joe's Garage do not exist.
+Pete's Party is a non-profit no money involved site that was developed as Milestone Project no2 for [Code Institute](https://codeinstitute.net "Code Institute").
 
 Thanks to my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for unvaluable guidance and tips.
 
