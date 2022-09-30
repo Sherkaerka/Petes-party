@@ -2,6 +2,23 @@
 let startGame = document.getElementById("start");
 startGame.addEventListener("click", chapterOne);
 
+/**
+ * Score counter 
+ */
+
+ function incrementTime() {
+
+    let oldTime = parseInt(document.getElementById("time").innerText);
+    document.getElementById("time").innerText = --oldTime;
+      
+    if (document.getElementById("time").innerText > 0) {
+        console.log("continue")
+    } else {
+        partyFive();
+    }
+}
+
+
 /** 
  * Add chapter 1 and challenge -Getting out of school
  */
@@ -496,21 +513,5 @@ function partyFive(){
 
     function startOver(){
         location.href = "index.html";    
-    }
-}
-
-/**
- * Score counter 
- */
-
- function incrementTime() {
-
-    let oldTime = parseInt(document.getElementById("time").innerText);
-    document.getElementById("time").innerText = --oldTime;
-      
-    if (document.getElementById("time").innerText > 0) {
-        console.log("continue")
-    } else {
-        partyFive();
     }
 }
