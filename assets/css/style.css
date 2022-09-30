@@ -152,6 +152,7 @@ img {
     border: 3px solid black;
     font-size: 40px;
     box-shadow: 2px 2px 2px 2px grey inset;
+    opacity: 1;
 }
 
 #sum1, #dice1, #dice2{

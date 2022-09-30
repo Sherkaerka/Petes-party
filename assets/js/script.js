@@ -139,7 +139,7 @@ function chapterOne(){
             return false;
         }
         document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p><br><h3>Tip:</h3><br><p>It's a combination lock, you can't use your keybord.</p>"
-    
+        
         /** Combination lock */
         let firstDigit = document.createElement("input");
         firstDigit.setAttribute("id","num1");

@@ -39,20 +39,24 @@ Pete's Party site was tested on the following browsers with no visible issues fo
 * As a As a user I want to be able to navigate through the whole site smoothly, no matter device.
     * The only choice of navigation is the house-icon present on all chapters and challenges. It will restart the game.
 * As a user I quickly want to understand the purpose of the site upon loading it.
-    * 
+    * The Logo kind of gives all: joystick indicating game, name of the game and also that it involves challenges.
 * As a user I want to understand how to play the game.
+    * After that you have your first header telling How the game works:.
 * As a user I want to know what the goal is.
+    * After that you have your first header telling How the game works:.
 * As a user I want to be inspired to try the game agian.
+    * The story-lines, different endings and challenges are to inspire a player to stay longer.
 * As a user I want to have feedback on my progress and result.
+    * There are 5 different endings that give different feedback to the player.
+    * Also while in the game you have the time indicator present at all times.
 * As a user I want to tell my friends about this great game.
+    * Social icons in the footer are meant for sharing the game.
   
 
 ### Known bugs, minor issues and solutions:
 
-During validation these three main bugs occured:
-* **Id duplicate on Company name**: This was due to id was used and I reused that id in the footer. Solution was to add it to class.
-* **Stray ends**: I unfortunately created this stray end very early on so it was copied via the header to all pages. These were removed.
-* **Inline styling on youtube videos**: I did not think of this when embedding the videos and everything worked fine, allthough I had the size-settings in the service.html. When removed I got a bit surprised how it acted until I found out that I had to have an extra div and give that parameters to maintain original proportions.
+During validation these main bugs occured:
+* **Pick the lock inputs could be typed negative**: It was already set to min 0 and max 9, but with your keyboard you could still set negative numbers, allthough you would get an error and eventually loose it didn't look good. As a solution and as extra feature for the game the keyboard is temporarily disabled on that challenge. It's a combination lock, so you don't have  keyboard for that.
 
 # Additional testing
 
