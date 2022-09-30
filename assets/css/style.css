@@ -15,12 +15,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
-/*
-#background {
-    background: url('../images/party-birthday-banner-with-space-text.jpg') no-repeat center center;
-    background-size: cover;
-}
-*/
+
 h1, h2, h3, h4{
     font-family: 'Noto Serif HK', sans-serif;
     font-weight: 500;
@@ -35,8 +30,9 @@ h1, h2, h3, h4{
     padding-top: 2px;
 }
 
-header > img {
+img {
     height: 200px;
+    width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
