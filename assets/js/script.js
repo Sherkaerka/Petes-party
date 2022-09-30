@@ -1,7 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 /** Start Full Game */
 let startGame = document.getElementById("start");
 startGame.addEventListener("click", chapterOne);
-
+});
 /** 
  * Add chapter 1 and challenge -Getting out of school
  */
