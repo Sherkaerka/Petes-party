@@ -12,7 +12,7 @@ startGame.addEventListener("click", chapterOne);
     document.getElementById("time").innerText = --oldTime;
       
     if (document.getElementById("time").innerText > 0) {
-        console.log("continue")
+        console.log("continue");
     } else {
         partyFive();
     }
@@ -55,7 +55,7 @@ function chapterOne(){
         document.getElementById("game-area").innerHTML = "";
         incrementTime();
 
-        document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Memorize the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>"
+        document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Memorize the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>";
         
         
         let revealTurns = document.createElement("input");
@@ -127,7 +127,6 @@ function chapterOne(){
         document.getElementById("game-area").appendChild(checkTurn);
 
         function checkTurns(){
-            isEqual
             console.log(isEqual(turns, b));
 
             if (isEqual(turns, b)) {
@@ -152,7 +151,7 @@ function chapterOne(){
         document.getElementById("game-area").innerHTML = "";
         incrementTime();
         
-        document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p><br>"
+        document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p><br>";
         
         /** Combination lock */
         let firstDigit = document.createElement("input");
@@ -277,7 +276,7 @@ function chapterTwoTwo(){
 
     document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Go empty handed or not?</h2><p>Ok, so we made it here somehow. Pete is standing on the sidewalk but with no present or any flowers. Going to the store is out of the question. He could go there empty handed and just explain or he could try to steal some flowers from a nearby garden. <br></p>";
 
-    document.getElementById("game-area").innerHTML += "<h3>How's it gonna be?</h3>"
+    document.getElementById("game-area").innerHTML += "<h3>How's it gonna be?</h3>";
     let goToPartyOne = document.createElement("input");
     goToPartyOne.setAttribute("id","go-to-party-one");
     goToPartyOne.setAttribute("type", "button");
@@ -376,8 +375,8 @@ function chapterThree() {
   
             else {
                 peteResult();
-                incrementTime()
-            };
+                incrementTime();
+            }
     }
 }
 
@@ -385,7 +384,7 @@ function peteResult(){
     document.getElementById("result-pete").innerHTML ++;
 
     if (document.getElementById("result-pete").innerText < 3) {
-        console.log("continue")
+        console.log("continue");
     } else {
         setTimeout(function() {
             partyThree();
@@ -397,7 +396,7 @@ function bobResult(){
     document.getElementById("result-bob").innerHTML ++;
     
     if (document.getElementById("result-bob").innerText < 3) {
-        console.log("continue")
+        console.log("continue");
     } else {
         setTimeout(function() {
             partyFour();
@@ -456,7 +455,7 @@ function partyThree(){
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="<h2>You won, congratulations!</h2><br><p>You've made all the right turns, had some luck and guided Pete with excellence!<br>Now he is at the party dancing with his best friend!</p><br><h3>This adventure ends here</h3><br><p>This game has several storylines and you can always try another way. Thanks for playing!</p>"
+    document.getElementById("story-area").innerHTML +="<h2>You won, congratulations!</h2><br><p>You've made all the right turns, had some luck and guided Pete with excellence!<br>Now he is at the party dancing with his best friend!</p><br><h3>This adventure ends here</h3><br><p>This game has several storylines and you can always try another way. Thanks for playing!</p>";
 
     document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>10</strong> out of 10</h3>";
 
@@ -478,7 +477,7 @@ function partyFour(){
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="<h2>Pete has to follow Bob down to the station!</h2><br><p>You sure had some fun along the way, but Bob is such a master with the dice! This is the end of the road for this time.</p><br><br><h3>You have to practice and then try again</h3><br><p>Thanks for playing, try again and see if you can improve your score with other choices and challenges.</p><br"
+    document.getElementById("story-area").innerHTML +="<h2>Pete has to follow Bob down to the station!</h2><br><p>You sure had some fun along the way, but Bob is such a master with the dice! This is the end of the road for this time.</p><br><br><h3>You have to practice and then try again</h3><br><p>Thanks for playing, try again and see if you can improve your score with other choices and challenges.</p><br";
 
     document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>1</strong> out of 10</h3>";
 
@@ -500,7 +499,7 @@ function partyFive(){
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
 
-    document.getElementById("story-area").innerHTML +="<h2>Party has ended!</h2><br><p>While you were fooling around making the wrong turns the music stopped and everyone went home.</p><br><br><h3>Never give up!</h3><br><p>There are many ways to do this and just hit the button below and go for it again! Thanks for playing!</p>"
+    document.getElementById("story-area").innerHTML +="<h2>Party has ended!</h2><br><p>While you were fooling around making the wrong turns the music stopped and everyone went home.</p><br><br><h3>Never give up!</h3><br><p>There are many ways to do this and just hit the button below and go for it again! Thanks for playing!</p>";
 
     document.getElementById("game-area").innerHTML += "<h3>Your score: <strong>2</strong> out of 10</h3>";
 
