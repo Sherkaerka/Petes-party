@@ -5,24 +5,20 @@ startGame.addEventListener("click", chapterOne);
 /**
  * Score counter 
  */
-
  function incrementTime() {
 
     let oldTime = parseInt(document.getElementById("time").innerText);
     document.getElementById("time").innerText = --oldTime;
       
     if (document.getElementById("time").innerText > 0) {
-        console.log("continue");
     } else {
         partyFive();
     }
 }
 
-
 /** 
  * Add chapter 1 and challenge -Getting out of school
  */
-
 function chapterOne(){
     document.getElementById("top-image").src= "assets/images/school.jpg";
 
@@ -63,6 +59,7 @@ function chapterOne(){
         revealTurns.addEventListener("click", showTurns);
         document.getElementById("game-area").appendChild(revealTurns); 
 
+        /**Shows the right turns for 3 seconds */
         function showTurns(){
             document.getElementById("game-area").innerHTML="left left right left right right";
             setTimeout(function(){
@@ -71,7 +68,7 @@ function chapterOne(){
             },3000);   
         }
     }
-    
+    /**Now it's time to type in the turns using an array: */
     function chooseTurns(){
         document.getElementById("game-area").innerHTML +="<h3>Now click the buttons in the right order</h3>";
 
@@ -96,21 +93,24 @@ function chapterOne(){
         displayTurns.setAttribute("id", "display-turns");
         document.getElementById("game-area").appendChild(displayTurns);
 
+        /**Add left to the array */
         function pushLeft(){
             turns.push("left");
-            document.getElementById("display-turns").innerHTML += "left";
+            document.getElementById("display-turns").innerHTML += "left ";
         }
 
+        /**Add right to the array */
         function pushRight(){
             turns.push("right");
-            document.getElementById("display-turns").innerHTML += "right";
+            document.getElementById("display-turns").innerHTML += "right ";
         }
 
+        /**Check if if there is matching turns */
         function isEqual(turns, b){
             return turns.join() == b.join();
         }
  
-        //Driver Code
+        /**Driver Code*/
         var b = ["left", "left", "right", "left", "right", "right"]; 
 
         let checkTurn = document.createElement("input");
@@ -232,7 +232,7 @@ function chapterTwo() {
     
 
     
-
+    /**Function to check if they have calculated right in the flower store */
     function checkSecondAnswer() {
         let cashierGuess = document.getElementById("sum1").value;
         let flowerPrice = document.getElementById("flower").innerHTML;
@@ -279,9 +279,7 @@ function chapterTwoTwo(){
     goToPartyTwo.value ="Try to Steal flowers!";
     goToPartyTwo.addEventListener("click", partyTwo);
     document.getElementById("game-area").appendChild(goToPartyTwo);  
-
 }
-
 
 /**
  * Adds Chapter 3 -Roll the dice
@@ -292,8 +290,7 @@ function chapterThree() {
     clearOut();
     
     document.getElementById("story-area").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p><br><h3>First one to 3 wins.</h3>";
-
-    
+ 
     /**
      * Dice game
      */
@@ -342,51 +339,52 @@ function chapterThree() {
     resultBob.setAttribute("id", "result-bob");
     document.getElementById("score-bob").appendChild(resultBob);
 
-
-
+    /**Generate random numbers 1-6 for the dicegame */
     function rollTheDice() {
         
-            var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-            var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+        var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+        var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-            document.getElementById("dice1").textContent = randomNumber1;
-            document.getElementById("dice2").textContent = randomNumber2;
+        document.getElementById("dice1").textContent = randomNumber1;
+        document.getElementById("dice2").textContent = randomNumber2;
   
-            if (randomNumber1 === randomNumber2) {
-                incrementTime();
-            }
+        if (randomNumber1 === randomNumber2) {
+            incrementTime();
+        }
   
-            else if (randomNumber1 < randomNumber2) {
-                incrementTime();
-                bobResult();
-            }
+        else if (randomNumber1 < randomNumber2) {
+            incrementTime();
+            bobResult();
+        }
   
-            else {
-                peteResult();
-                incrementTime();
-            }
+        else {
+            peteResult();
+            incrementTime();
+        }
     }
 }
 
+/**Log Petes result */
 function peteResult(){
     document.getElementById("result-pete").innerHTML ++;
 
     if (document.getElementById("result-pete").innerText < 3) {
-        console.log("continue");
     } else {
         setTimeout(function() {
+            alert("Yeah! You beat Bob at dice, no one has ever done that before!");
             partyThree();
         },2000);
     }
 }
 
+/**Logs Bobs result */
 function bobResult(){
     document.getElementById("result-bob").innerHTML ++;
     
     if (document.getElementById("result-bob").innerText < 3) {
-        console.log("continue");
     } else {
         setTimeout(function() {
+            alert("Oh no, Bob beat you at dice...");
             partyFour();
         },2000);
     }
@@ -396,6 +394,7 @@ function bobResult(){
  * Final scenes depending on user choices
  */
 
+/**First ending where you made it there but not with top score */
 function partyOne(){
     document.getElementById("top-image").src= "assets/images/score-hey.png";
     clearOut();
@@ -416,6 +415,7 @@ function partyOne(){
     }
 }
 
+/**Second Ending where you've been knocked down with a frying pan as you try to steal flowers */
 function partyTwo(){
     document.getElementById("top-image").src= "assets/images/flying_pan.jpg";
     clearOut();
@@ -436,6 +436,7 @@ function partyTwo(){
     }
 }
 
+/**Third ending where you won the game, top score! */
 function partyThree(){
     document.getElementById("top-image").src= "assets/images/dancing.jpg";
     clearOut();
@@ -456,6 +457,7 @@ function partyThree(){
     }
 }
 
+/**Fourth ending ends up in jail */
 function partyFour(){
     document.getElementById("top-image").src= "assets/images/jail.jpg";
     
@@ -478,6 +480,7 @@ function partyFour(){
     }
 }
 
+/**Fifth ending -Time's up */
 function partyFive(){
     document.getElementById("top-image").src= "assets/images/times_up.jpg";
     clearOut();
@@ -498,6 +501,7 @@ function partyFive(){
     }
 }
 
+/**Clearing function that empties story and gaming area */
 function clearOut(){
     document.getElementById("story-area").innerHTML ="";
     document.getElementById("game-area").innerHTML ="";
