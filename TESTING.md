@@ -62,7 +62,11 @@ Pete's Party site was tested on the following browsers with no visible issues fo
 During validation these main bugs occured:
 * **Pick the lock inputs could be typed negative**: It was already set to min 0 and max 9, but with your keyboard you could still set negative numbers, allthough you would get an error and eventually loose it didn't look good. As a solution I thought that an extra feature for the game would be that the keyboard was temporarily disabled on that challenge. But that caused issues on tablet and phones. So instead I used the validation.validity function so that only positive inputs are possible.
 
-* **Unexpected "let" issue when validating javascript code**: 
+* **Unexpected "let" issue when validating javascript code**: These are ES6 type and will be ignored.
+
+* **Perfromance issues**: First lightouse testing came back with 81 in performance. Found out that images were too big. Made them smaller and performance went up.
+
+* **Repetative code**: The code for clrearing story- and gaming-area was repetedly used. Replaced them wit a clearOut -function.
 
 
 # Additional testing
