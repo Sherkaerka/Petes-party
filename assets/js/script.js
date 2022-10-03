@@ -23,7 +23,7 @@ function chapterOne(){
     document.getElementById("top-image").src= "assets/images/school.jpg";
 
     clearOut();
-    document.getElementById("story-area").innerHTML += "<h2>Chapter 1: Getting out of school!</h2><p>As he steps out of the school building, he can see that place isn’t empty as he expected. Instead, the bus-stop is so overcrowded that the last bit of hope to make it to the party leaves him.<br>Pete sits down on the staircase, sobbing and feeling sorry for himself: “Look at this mess, why do this have to be the story of my life!?”<br>Then he sees it, one lonely bike just standing there. It’s not his bike, of course, but maybe if he were just to have a look…<br>It’s locked…combination lock…one could give it a try since everyone else is focusing on trying to climb the first bus approaching the stop.<br>Or I could start walking, what do you think?";
+    document.getElementById("story-area").innerHTML += "<h2>Chapter 1: Getting out of school!</h2><p>As he steps out of the school building, he can see that place isn’t empty as he expected. Instead, the bus-stop is overcrowded. The last bit of hope to make it to the party leaves him.<br>Pete sits down on the staircase, sobbing and feeling sorry for himself: “Look at this mess, why do this have to be the story of my life!?”<br>Then he sees it, one lonely bike just standing there. It’s not his bike, of course, but maybe if he were just to have a look…<br>It’s locked…combination lock…one could give it a try since everyone else is focusing on trying to climb the first bus approaching the stop.<br>Or I could start walking, what do you think?";
 
     document.getElementById("game-area").innerHTML += "<h3>What do you wanna do?</h3>";
 
