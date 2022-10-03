@@ -26,8 +26,7 @@ startGame.addEventListener("click", chapterOne);
 function chapterOne(){
     document.getElementById("top-image").src= "assets/images/school.jpg";
 
-    document.getElementById("game-area").innerHTML ="";
-    document.getElementById("story-area").innerHTML = "";
+    clearOut();
     document.getElementById("story-area").innerHTML += "<h2>Chapter 1: Getting out of school!</h2><p>As he steps out of the school building, he can see that place isn’t empty as he expected. Instead, the bus-stop is so overcrowded that the last bit of hope to make it to the party leaves him.<br>Pete sits down on the staircase, sobbing and feeling sorry for himself: “Look at this mess, why do this have to be the story of my life!?”<br>Then he sees it, one lonely bike just standing there. It’s not his bike, of course, but maybe if he were just to have a look…<br>It’s locked…combination lock…one could give it a try since everyone else is focusing on trying to climb the first bus approaching the stop.<br>Or I could start walking, what do you think?";
 
     document.getElementById("game-area").innerHTML += "<h3>What do you wanna do?</h3>";
@@ -51,8 +50,7 @@ function chapterOne(){
     function startWalking(){
         document.getElementById("top-image").src= "assets/images/road.jpg";
         
-        document.getElementById("story-area").innerHTML = "";
-        document.getElementById("game-area").innerHTML = "";
+        clearOut();
         incrementTime();
 
         document.getElementById("story-area").innerHTML += "<p>So...Pete starts walking and as you can see on the timer above time flies by.<br>After a while Pete's mom drives by and pull over. -Do you need a ride? she asks.<br>Lacking any better option Pete gets into the car knowing that she usually gets lost...<br><br><h4>Your challenge: Memorize the way</h4><br>As you click the button below a number of turns will be reveald for a few second. Remember them and fill it in correctly afterwards. Otherwise you will be delayed.</p>";
@@ -78,7 +76,6 @@ function chapterOne(){
         document.getElementById("game-area").innerHTML +="<h3>Now click the buttons in the right order</h3>";
 
         let turns = [];
-        console.log(turns);
 
         /**Turn answer buttons */
         let leftTurn = document.createElement("input");
@@ -101,13 +98,11 @@ function chapterOne(){
 
         function pushLeft(){
             turns.push("left");
-            console.log(turns);
             document.getElementById("display-turns").innerHTML += "left";
         }
 
         function pushRight(){
             turns.push("right");
-            console.log(turns);
             document.getElementById("display-turns").innerHTML += "right";
         }
 
@@ -116,8 +111,7 @@ function chapterOne(){
         }
  
         //Driver Code
-        var b = ["left", "left", "right", "left", "right", "right"];
-        console.log(isEqual(turns, b));    
+        var b = ["left", "left", "right", "left", "right", "right"]; 
 
         let checkTurn = document.createElement("input");
         checkTurn.setAttribute("id","checkTurns");
@@ -127,8 +121,6 @@ function chapterOne(){
         document.getElementById("game-area").appendChild(checkTurn);
 
         function checkTurns(){
-            console.log(isEqual(turns, b));
-
             if (isEqual(turns, b)) {
                 alert("Yes! You're a walking map!");
                 chapterTwoTwo();
@@ -147,8 +139,7 @@ function chapterOne(){
     function lockPick(){
         document.getElementById("top-image").src= "assets/images/sixtens_bike.jpg";
 
-        document.getElementById("story-area").innerHTML = "";
-        document.getElementById("game-area").innerHTML = "";
+        clearOut();
         incrementTime();
         
         document.getElementById("story-area").innerHTML += "<p>Ok, let's try the life of a burglar. What might the combination be? <br> I think this is Sixten's bike. It's so funny 'cause his name sound like a number: Six-Ten...let's try that combo...</p><br>";
@@ -215,8 +206,7 @@ function chapterOne(){
 function chapterTwo() {
     document.getElementById("top-image").src= "assets/images/store.jpg";
 
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").setAttribute("class", "chapter");
     document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Get the flowers!</h2><p>What a smooth ride, the summer evening scenery just flies by. Sixten’s bike is a true beauty. “I will put it back tomorrow, no one will notice, I’m not a criminal”<br>Now, off to the store to get some flowers and a snack.<br>Oh no! It’s that old cashier Greta, she’s been fooling Pete so many times. “Id better do some proper counting myself before lining up.”<br>So Pete's got a $50-bill. The flowers will be $<span id='flower'>0</span> and a piece of snack $<span id='snack'>0</span> and some pink chewing gum too at $<span id='gum'>0</span>.<br>How much will there be left?</p>";
@@ -271,8 +261,7 @@ function chapterTwo() {
 function chapterTwoTwo(){
     document.getElementById("top-image").src= "assets/images/gift.jpg";
     
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML += "<h2>Chapter 2: Go empty handed or not?</h2><p>Ok, so we made it here somehow. Pete is standing on the sidewalk but with no present or any flowers. Going to the store is out of the question. He could go there empty handed and just explain or he could try to steal some flowers from a nearby garden. <br></p>";
 
@@ -300,8 +289,7 @@ function chapterTwoTwo(){
 function chapterThree() {
     document.getElementById("top-image").src= "assets/images/bobs_car.jpg";
 
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
     
     document.getElementById("story-area").innerHTML += "<h2>Chapter 3: Long arm of the law!</h2><p>“So glad that I am a math genius!”<br>But outside the store he can see police officer Bob hanging over Sixten’s bike. '-Did you get here on this?' he asks.<br>Pete tries to run but with Bob’s hand on his shoulder he just won’t get anywhere.<br>“-You know, we could forget this if you beat me at dice!” Bob suggests<br></p><br><h3>First one to 3 wins.</h3>";
 
@@ -410,8 +398,7 @@ function bobResult(){
 
 function partyOne(){
     document.getElementById("top-image").src= "assets/images/score-hey.png";
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML += "<h2>Hey, you made it, but...</h2><br><p>Pete's not feeling as a winner though, he got there later than necessary, again depending on his mother and without any flowers.</p><br><h3>One last choice are you happy or not?</h3><br><p>There are other ways to do it...</p>";
 
@@ -431,8 +418,7 @@ function partyOne(){
 
 function partyTwo(){
     document.getElementById("top-image").src= "assets/images/flying_pan.jpg";
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML += "<h2>Headache</h2><br><p>Pete sneakes into the garden and starts to search for the perfect color combination. He can't hear the old lady with her frying pan coming up behind him.<br>But he can almost hear the bang as the pan hit the back of his head... </p><br><h3>Why did you do this to Pete?</h3><br><p>Waking up on the sidewalk with a terrible pain Pete can see that the party has ended and starts to walk the long way home.</p>";
 
@@ -452,8 +438,7 @@ function partyTwo(){
 
 function partyThree(){
     document.getElementById("top-image").src= "assets/images/dancing.jpg";
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML +="<h2>You won, congratulations!</h2><br><p>You've made all the right turns, had some luck and guided Pete with excellence!<br>Now he is at the party dancing with his best friend!</p><br><h3>This adventure ends here</h3><br><p>This game has several storylines and you can always try another way. Thanks for playing!</p>";
 
@@ -474,8 +459,7 @@ function partyThree(){
 function partyFour(){
     document.getElementById("top-image").src= "assets/images/jail.jpg";
     
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML +="<h2>Pete has to follow Bob down to the station!</h2><br><p>You sure had some fun along the way, but Bob is such a master with the dice! This is the end of the road for this time.</p><br><br><h3>You have to practice and then try again</h3><br><p>Thanks for playing, try again and see if you can improve your score with other choices and challenges.</p><br";
 
@@ -496,8 +480,7 @@ function partyFour(){
 
 function partyFive(){
     document.getElementById("top-image").src= "assets/images/times_up.jpg";
-    document.getElementById("story-area").innerHTML ="";
-    document.getElementById("game-area").innerHTML ="";
+    clearOut();
 
     document.getElementById("story-area").innerHTML +="<h2>Party has ended!</h2><br><p>While you were fooling around making the wrong turns the music stopped and everyone went home.</p><br><br><h3>Never give up!</h3><br><p>There are many ways to do this and just hit the button below and go for it again! Thanks for playing!</p>";
 
@@ -513,4 +496,9 @@ function partyFive(){
     function startOver(){
         location.href = "index.html";    
     }
+}
+
+function clearOut(){
+    document.getElementById("story-area").innerHTML ="";
+    document.getElementById("game-area").innerHTML ="";
 }

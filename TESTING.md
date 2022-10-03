@@ -13,6 +13,10 @@ The CSS validator results are below:
 
 ![Css validation](./assets/readme-images/cssvalidation.PNG)
 
+To validate javascript JSHint was used:
+45 ES6 warnings remaining.
+![Javascript-validation](./assets/readme-images/jshint.PNG)
+
 # Resposiveness test
 The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Responsive Design Checker](https://responsivedesignchecker.com/).
 
@@ -26,11 +30,11 @@ Screen dimentions tested:
 * Galaxy S8+
 
 Parameters checked and passed:
-* Render
-* Images
-* Links
-* Buttons
-* Inputs
+* The weppage render well on any device.
+* Images look good and load on any device.
+* Links are working properly.
+* Buttons are working properly and follow given design.
+* Inputs are working on all type of devices.
 
 # Browser compatibillity
 Pete's Party site was tested on the following browsers with no visible issues for the user. Google Chrome, Microsoft Edge, Safari and Mozilla Firefox. Appearance, functionality and responsiveness were consistent throughout for a range of device sizes and browsers.
@@ -56,7 +60,10 @@ Pete's Party site was tested on the following browsers with no visible issues fo
 ### Known bugs, minor issues and solutions:
 
 During validation these main bugs occured:
-* **Pick the lock inputs could be typed negative**: It was already set to min 0 and max 9, but with your keyboard you could still set negative numbers, allthough you would get an error and eventually loose it didn't look good. As a solution and as extra feature for the game the keyboard is temporarily disabled on that challenge. It's a combination lock, so you don't have  keyboard for that.
+* **Pick the lock inputs could be typed negative**: It was already set to min 0 and max 9, but with your keyboard you could still set negative numbers, allthough you would get an error and eventually loose it didn't look good. As a solution I thought that an extra feature for the game would be that the keyboard was temporarily disabled on that challenge. But that caused issues on tablet and phones. So instead I used the validation.validity function so that only positive inputs are possible.
+
+* **Unexpected "let" issue when validating javascript code**: 
+
 
 # Additional testing
 

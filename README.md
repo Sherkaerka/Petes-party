@@ -27,6 +27,8 @@ Live site can be visited at: [Pete's Party website](https://sherkaerka.github.io
         * [Time Left](#time-left-a-nametimelefta)
         * [Story Area](#story-area-a-namestoryareaa)
         * [Game Area](#game-area-a-namegameareaa)
+        * [Alerts](#alerts-a-namealertsa)
+        * [Different endings](#different-endings-a-namedifferent-endingsa)
         * [Footer](#footer-a-namefootera) 
     * [Future Features](#future-features-a-namefuturefeaturesa)
 * [Technologies Used](#technologies-used-a-nametechuseda)
@@ -97,8 +99,6 @@ As seen above the navigation menu contains an house-icon that whenever clicked w
 When the game start's you have 10 hours until the party is over. Then as you play the game, depending on your choices and abiliity to solve the challenges it will count down. Unless you make it in time it will be Game Over.
 
 <br>
-[Back to top](#table-of-contents)
-
 #### Story area <a name="storyarea"></a>
 The Story area is where the chapters and story is presented. It's basically meant as an interactive book.
 
@@ -108,9 +108,22 @@ The Story area is where the chapters and story is presented. It's basically mean
 #### Game area <a name="gamearea"></a>
 The Game area is where the player either make choices of what to do or interact in challenges.
 
-![About](./assets/readme-images/gamearea.PNG)
+![Game Area](./assets/readme-images/gamearea.PNG)
 [Back to top](#table-of-contents)
 
+#### Alerts <a name="alerts"></a>
+A lot of the game feedback is coming through alerts and they contribute to the "vibe" of the game.
+
+![Alerts](./assets/readme-images/alerts.PNG)
+<br>
+[Back to top](#table-of-contents)
+
+#### Different endings <a name="different-endings"></a>
+The game has five different endings to inspire the user to try again just for fun or to get better results. They consist of "Times up", "Jail", "Passing out", "Getting there without any flowers" and the top result where everything is in place and he's the "Winner".
+
+![Different endings](./assets/readme-images/winner-ending.PNG)
+<br>
+[Back to top](#table-of-contents)
 
 #### Footer <a name="footer"></a>
 Appears in the exact same way on all pages. Shows social buttons and are intended to share the game to friends.
@@ -173,6 +186,11 @@ The method from cloning a project from GitHub is below:
 
 ![How to clone in Github](./assets/readme-images/clone.PNG)
 
+3. In your IDE of choice, open **Git Bash**.
+4. Change the current working directory to the location where you want the cloned directory to be made.
+5. Type **git clone**, and then paste the URL copied from GitHub.
+6. **Press enter** and the local clone will be created.
+
 [Back to top](#table-of-contents)
 
 ## Credits <a name="credits"></a>
@@ -180,7 +198,7 @@ The method from cloning a project from GitHub is below:
 ### Content <a name="content"></a>
 The font came from [Google Fonts](https://fonts.google.com/about).
 Fonts were choosen with [Canva](http://www.canva.com)
-The Slate colour palate was compiled from the logo [Freepik](https://www.freepik.com/).
+The colour palate was compiled from the logo [Freepik](https://www.freepik.com/).
 The icons came from [Font Awesome](https://fontawesome.com/).
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
 
